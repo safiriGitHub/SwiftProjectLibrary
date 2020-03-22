@@ -19,7 +19,8 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         //.package(url: "https://github.com/SnapKit/SnapKit.git", from: "4.0.0"),
         //.package(url: "https://github.com/SnapKit/SnapKit.git", Package.Dependency.Requirement._exactItem("4.2.0")),
-        .package(url: "https://github.com/safiriGitHub/SnapKit.git", Package.Dependency.Requirement._branchItem("safiri420"))
+//        .package(url: "https://github.com/safiriGitHub/SnapKit.git", Package.Dependency.Requirement._branchItem("safiri420"))
+        .package(url: "https://github.com/safiriGitHub/SnapKit.git", Package.Dependency.Requirement._exactItem("4.2.1"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

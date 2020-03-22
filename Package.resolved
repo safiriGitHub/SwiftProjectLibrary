@@ -5,9 +5,9 @@
         "package": "SnapKit",
         "repositoryURL": "https://github.com/safiriGitHub/SnapKit.git",
         "state": {
-          "branch": "safiri420",
-          "revision": "35451fa87d579e65bcf9c16a4a7dd3de987c2d82",
-          "version": null
+          "branch": null,
+          "revision": "393e4bbf1fff348a70e7d76b7f74ab4808e55fec",
+          "version": "4.2.1"
         }
       }
     ]
