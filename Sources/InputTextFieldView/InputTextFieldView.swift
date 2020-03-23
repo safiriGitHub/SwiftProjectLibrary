@@ -9,10 +9,10 @@
 import UIKit
 import Snapkit
 
-class InputTextFieldView: UIView, UITextFieldDelegate {
+public class InputTextFieldView: UIView, UITextFieldDelegate {
 
     
-    init(type: InputTextFieldViewType) {
+    public init(type: InputTextFieldViewType) {
         super.init(frame: .zero)
         inputType = type
         setupSubviews()
@@ -59,12 +59,12 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
         rightOperationBtn.addTarget(self, action: #selector(rightOperationBtnClick), for: .touchUpInside)
     }
     
-    static func attrPlaceholerMake(_ string: String, foregroundColor color: UIColor) -> NSAttributedString {
+    public static func attrPlaceholerMake(_ string: String, foregroundColor color: UIColor) -> NSAttributedString {
         return NSAttributedString.init(string:string, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 20, weight: .light), NSAttributedString.Key.foregroundColor:color])
     }
     
     //MARK: - action animation
-    func animationLineView(actitity: Bool) {
+    public func animationLineView(actitity: Bool) {
         if actitity {
             self.lineView.snp_updateConstraints { (make) in
                 make.height.equalTo(2)
@@ -80,7 +80,7 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
         }
     }
     
-    func animationHintingLabel(inputed: Bool) {
+    public func animationHintingLabel(inputed: Bool) {
         
         if inputed {
             self.hintingLabel.isHidden = false
@@ -96,7 +96,7 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
         }
     }
     
-    @objc func rightOperationBtnClick() {
+    @objc public func rightOperationBtnClick() {
         self.rightOperationBtn.isSelected = !self.rightOperationBtn.isSelected
         if inputType == .Password {
             self.inputTF.isSecureTextEntry = !self.rightOperationBtn.isSelected
@@ -106,15 +106,15 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
     
     //MARK: - delegate
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.isActivity = true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         self.isActivity = false
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if string.isEmpty {
             if range.location == 0 {
@@ -150,12 +150,12 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
     
     //MARK: - params
     /// 输入模式
-    var inputType: InputTextFieldViewType = .Normal
+    public var inputType: InputTextFieldViewType = .Normal
     /// 控制最长输入
-    var maxLimit: Int = 0
+    public var maxLimit: Int = 0
     
     /// 提示label
-    let hintingLabel: UILabel = {
+    public let hintingLabel: UILabel = {
         let hint = UILabel()
         hint.textColor = UIColor.init(r: 150, g: 150, b: 150)
         hint.font = UIFont.systemFont(ofSize: 15, weight: .light)
@@ -164,12 +164,12 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
         return hint
     }()
     /// 输入框底部线活动颜色
-    var lineViewActiveColor: UIColor? = UIColor(hexString: "5e2adc")
+    public var lineViewActiveColor: UIColor? = UIColor(hexString: "5e2adc")
     /// 输入框底部线普通颜色
-    var lineViewNormalColor: UIColor? = UIColor.init(r: 232, g: 232, b: 232)
+    public var lineViewNormalColor: UIColor? = UIColor.init(r: 232, g: 232, b: 232)
     
     /// 输入框
-    let inputTF: UITextField = {
+    public let inputTF: UITextField = {
         let textField = UITextField()
         textField.font = UIFont.systemFont(ofSize: 20, weight: .light)
         textField.borderStyle = .none
@@ -179,38 +179,38 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
     }()
     
     /// 输入框底部线
-    let lineView: UIView = {
+    public let lineView: UIView = {
         let line = UIView()
         line.backgroundColor = UIColor.init(r: 232, g: 232, b: 232)
         return line
     }()
     /// 输入框底部线活动颜色
-    var hintLabelActiveColor: UIColor? = UIColor.init(r: 150, g: 150, b: 150)
+    public var hintLabelActiveColor: UIColor? = UIColor.init(r: 150, g: 150, b: 150)
     /// 输入框底部线普通颜色
-    var hintLabelNormalColor: UIColor? = UIColor.init(r: 222, g: 222, b: 222)
+    public var hintLabelNormalColor: UIColor? = UIColor.init(r: 222, g: 222, b: 222)
     
     /// 输入框右边按钮
-    let rightOperationBtn: UIButton = { //这里的逻辑待封装优化，先这样
+    public let rightOperationBtn: UIButton = { //这里的逻辑待封装优化，先这样
         let btn = UIButton(type: .custom)
         btn.isHidden = true
         return btn
     }()
     /// 输入框右边按钮是否隐藏
-    var isRightOperationHidden: Bool = true {
+    public var isRightOperationHidden: Bool = true {
         willSet {
             self.rightOperationBtn.isHidden = newValue
         }
     }
     
     /// 是否在活跃状态
-    var isActivity: Bool = false {
+    public var isActivity: Bool = false {
         willSet {
             animationLineView(actitity: newValue)
         }
     }
     
     /// 是否含有输入
-    var isInputed: Bool = false {
+    public var isInputed: Bool = false {
         willSet {
             if self.isInputed != newValue {
                 animationHintingLabel(inputed: newValue)
@@ -219,17 +219,15 @@ class InputTextFieldView: UIView, UITextFieldDelegate {
     }
     
     /// 输入框的placeholder
-    var attrPlaceholder:NSAttributedString? {
+    public var attrPlaceholder:NSAttributedString? {
         willSet {
             self.inputTF.attributedPlaceholder = newValue
         }
     }
     
-    let inputContentview = UIView()
- 
-    
-    
+    public let inputContentview = UIView()
+  
 }
-enum InputTextFieldViewType {
+public enum InputTextFieldViewType {
     case Normal, Password
 }
