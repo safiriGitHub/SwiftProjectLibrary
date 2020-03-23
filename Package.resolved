@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Hue",
+        "repositoryURL": "https://github.com/zenangst/Hue.git",
+        "state": {
+          "branch": null,
+          "revision": "b9d920cee4ba795fefb828d130744eee1e3d2feb",
+          "version": "5.0.1"
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/safiriGitHub/SnapKit.git",
         "state": {

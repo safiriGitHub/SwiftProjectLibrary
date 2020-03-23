@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Snapkit
+import SnapKit
+import Hue
 
 public class InputTextFieldView: UIView, UITextFieldDelegate {
 
@@ -157,6 +158,7 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
     /// 提示label
     public let hintingLabel: UILabel = {
         let hint = UILabel()
+        
         hint.textColor = UIColor.init(r: 150, g: 150, b: 150)
         hint.font = UIFont.systemFont(ofSize: 15, weight: .light)
         hint.isHidden = true
@@ -164,7 +166,7 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
         return hint
     }()
     /// 输入框底部线活动颜色
-    public var lineViewActiveColor: UIColor? = UIColor(hexString: "5e2adc")
+    public var lineViewActiveColor: UIColor? = UIColor(hex: "5e2adc")
     /// 输入框底部线普通颜色
     public var lineViewNormalColor: UIColor? = UIColor.init(r: 232, g: 232, b: 232)
     
@@ -228,6 +230,18 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
     public let inputContentview = UIView()
   
 }
+
 public enum InputTextFieldViewType {
     case Normal, Password
+}
+
+private extension UIColor {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a:CGFloat = 1.0) {
+        if #available(iOS 10.0, *) {
+            self.init(displayP3Red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
+        } else {
+            // Fallback on earlier versions
+            self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
+        }
+    }
 }
