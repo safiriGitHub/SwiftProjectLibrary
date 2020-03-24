@@ -9,13 +9,13 @@ import Foundation
 
 public struct RegexHelper {
     
-    let regex: NSRegularExpression
+    public let regex: NSRegularExpression
     
-    init(_ pattern: String) throws {
+    public init(_ pattern: String) throws {
         try regex = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
     }
     
-    func match(_ input: String) -> Bool {
+    public func match(_ input: String) -> Bool {
         let matches = regex.matches(in: input, options: [], range: NSMakeRange(0, input.utf16.count))
         return matches.count > 0
     }
