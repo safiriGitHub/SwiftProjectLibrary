@@ -35,13 +35,13 @@ public struct RegexHelper {
 //其他的修饰子还包括prefix和postfix
 infix operator =~~ : MultiplicationPrecedence
 
-//public func =~~(object: String, template: String) -> Bool {
-//    do {
-//        return try RegexHelper(template).match(object)
-//    } catch _ {
-//        return false
-//    }
-//}
+public func =~~(object: String, template: String) -> Bool {
+    do {
+        return try RegexHelper(template).match(object)
+    } catch _ {
+        return false
+    }
+}
 
 public func =~~(object: String, regexType: RegexType) -> Bool {
     do {
@@ -109,12 +109,15 @@ public enum RegexType : String {
 
     /// 字母
     case RegexLetter  = "^[A-Z]+$"
-
+    
+    /// 燃油车牌和新能源车牌
+    case RegexCarHphm = "^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4,5}[A-Z0-9挂学警港澳专]{1})*$"
+    
     /// 一般类型车牌号
-    case RegexHphm = "^[\\u4e00-\\u9fa5]{1}[a-hj-np-zA-HJ-NP-Z]{1}[a-hj-np-zA-HJ-NP-Z0-9]{4}[a-hj-np-zA-HJ-NP-Z0-9\\u4e00-\\u9fa5]$"
+    case RegexHphm = "^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳专]{1})*$"
     
     /// 新能源车牌号
-    case RegexNewEnergyHphm = "^[\\u4e00-\\u9fa5]{1}[a-hj-np-zA-HJ-NP-Z]{1}[a-hj-np-zA-HJ-NP-Z0-9]{5}[a-hj-np-zA-HJ-NP-Z0-9\\u4e00-\\u9fa5]$"
+    case RegexNewEnergyHphm = "^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{5}[A-Z0-9挂学警港澳专]{1})*$"
     
     /// 统一社会信用代码
     case RegexUnifiedSocialCreditCode = "[1-9A-GY]{1}[1239]{1}[1-5]{1}[0-9]{5}[0-9A-Z]{10}"
