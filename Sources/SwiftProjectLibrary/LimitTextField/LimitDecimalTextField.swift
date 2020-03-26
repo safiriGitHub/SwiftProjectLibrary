@@ -9,7 +9,7 @@
 import UIKit
 
 /// 小数输入框：只能输入数字和“.” ,并可限制输入小数点后几位
-class LimitDecimalTextField: LimitTextField {
+public class LimitDecimalTextField: LimitTextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class LimitBankCardTextField: LimitTextField {
+/// 银行卡号输入限制: 4位自动加空格，还有bug待修复：如移动输入坐标后输入，就无法自动加空格了
+public class LimitBankCardTextField: LimitTextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
