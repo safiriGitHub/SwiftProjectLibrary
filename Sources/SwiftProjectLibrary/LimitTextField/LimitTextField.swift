@@ -22,22 +22,22 @@ public class LimitTextField: UITextField {
         NotificationCenter.default.removeObserver(self)
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addObserver()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         addObserver()
     }
     
-    func addObserver() {
+    public func addObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldChanged), name: UITextField.textDidChangeNotification, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldChanged), name: UITextField.textDidEndEditingNotification, object: self)    }
     
     
-    @objc func textFieldChanged() {
+    @objc public func textFieldChanged() {
         
         //非markedText才继续往下处理
         guard let _: UITextRange = self.markedTextRange else {
@@ -106,15 +106,15 @@ public class LimitTextField: UITextField {
     
     //MARK: param
     /// 获取正则表达式字符串回调
-    var regularLimitCb: (()->String)?
+    public var regularLimitCb: (()->String)?
     /// 获取正则表达式枚举回调
-    var regularLimitTypeCb: (()->RegularLimitType)?
+    public var regularLimitTypeCb: (()->RegularLimitType)?
     /// 长度限制回调
-    var lengthLimitCb: (()->Int)?
+    public var lengthLimitCb: (()->Int)?
     /// 是否大小写回调
-    var uppercasedLimitCb: (()->Bool)?
+    public var uppercasedLimitCb: (()->Bool)?
     /// 自定义操作回调
-    var customOperationCb:((_ lastOperationString: String, _ inputString: String)->String)?
+    public var customOperationCb:((_ lastOperationString: String, _ inputString: String)->String)?
     
     private lazy var lastOprationStr: String = self.text!
     

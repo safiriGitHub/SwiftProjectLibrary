@@ -11,21 +11,21 @@ import UIKit
 /// 小数输入框：只能输入数字和“.” ,并可限制输入小数点后几位
 public class LimitDecimalTextField: LimitTextField {
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         decimal()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         decimal()
     }
     
     /// 小数点后几位
-    var numberAfterPoint: Int = 3
+    public var numberAfterPoint: Int = 3
     
     //TODO: 就算调出第三方键盘，也能控制输入
-    func decimal() {
+    public func decimal() {
         //keyboardType = .decimalPad 加上这行代码后，会调出第三方键盘。不知为何？ 目前暂时在xib中选decimalPad
         customOperationCb = { [weak self] (lastOprationStr, inputString) in
             var str = inputString

@@ -10,18 +10,18 @@ import UIKit
 /// 银行卡号输入限制: 4位自动加空格，还有bug待修复：如移动输入坐标后输入，就无法自动加空格了
 public class LimitBankCardTextField: LimitTextField {
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         bankcard()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         bankcard()
     }
     
     
-    func bankcard() {
+    public func bankcard() {
         keyboardType = .numberPad //加上这行代码后，会调出第三方键盘。不知为何？ 目前暂时在xib中选numberPad
         customOperationCb = { (lastOprationStr, inputString) in
             var str = inputString
