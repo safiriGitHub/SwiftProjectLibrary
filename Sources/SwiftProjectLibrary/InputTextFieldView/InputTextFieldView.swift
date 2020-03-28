@@ -18,13 +18,18 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
         inputType = type
         setupSubviews()
     }
+    public init(customTF: UITextField) {
+        super.init(frame: .zero)
+        inputType = .Custom
+        setupSubviews(customTF)
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupSubviews()
     }
     
-    func setupSubviews() {
+    func setupSubviews(_ customTF: UITextField? = nil) {
         
         addSubview(hintingLabel)
         self.hintingLabel.snp_makeConstraints { (make) in
@@ -45,12 +50,21 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
             make.top.equalToSuperview().offset(35)
         }
         
-        inputTF.delegate = self
-        inputTF.isSecureTextEntry = inputType == .Password
-        inputContentview.addSubview(inputTF)
-        inputTF.snp_makeConstraints { (make) in
-            make.edges.equalToSuperview()
+        if let tf = customTF {
+            tf.delegate = self
+            inputContentview.addSubview(tf)
+            tf.snp_makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
+        }else {
+            inputTF.delegate = self
+            inputTF.isSecureTextEntry = inputType == .Password
+            inputContentview.addSubview(inputTF)
+            inputTF.snp_makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
         }
+        
         
         addSubview(rightOperationBtn)
         rightOperationBtn.snp_makeConstraints { (make) in
@@ -59,6 +73,7 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
         }
         rightOperationBtn.addTarget(self, action: #selector(rightOperationBtnClick), for: .touchUpInside)
     }
+    
     
     public static func attrPlaceholerMake(_ string: String, foregroundColor color: UIColor) -> NSAttributedString {
         return NSAttributedString.init(string:string, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 20, weight: .light), NSAttributedString.Key.foregroundColor:color])
@@ -232,7 +247,7 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
 }
 
 public enum InputTextFieldViewType {
-    case Normal, Password
+    case Normal, Password, Custom
 }
 
 private extension UIColor {
