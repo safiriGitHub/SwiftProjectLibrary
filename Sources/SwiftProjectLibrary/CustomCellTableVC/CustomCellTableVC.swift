@@ -49,6 +49,11 @@ public class CustomCellTableVC: UIViewController, UITableViewDelegate, UITableVi
     public func registerCell<T: UITableViewCell>(cell: T.Type) where T:RegisterCellFromNib {
         tableView.zs_registerCell(cell: cell)
     }
+    
+    public func registerCell<T: UITableViewCell>(cellType: T.Type) where T:RegisterCellFromNib {
+        tableView.zs_registerCell(cellType: cellType)
+    }
+    
     public func reloadData() {
         tableView.reloadData()
     }

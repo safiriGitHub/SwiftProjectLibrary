@@ -26,14 +26,15 @@ public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate 
             make.edges.equalToSuperview()
         }
         tableViewVC.customCellDelegate = self
-        tableViewVC.registerCell(cell: ShowDefaultCell.self)
+        tableViewVC.registerCell(cellType: ShowDefaultCell.self)
+        
     }
     
     public func customCellTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, tagString: String) -> UITableViewCell {
         let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as ShowDefaultCell
         if indexPath.row < titleArray.count {
             cell.titleLabel.text = titleArray[indexPath.row]
-            cell.conLabel.text = contentArray[indexPath.row]
+            cell.contentLabel.text = contentArray[indexPath.row]
         }
         return cell
     }

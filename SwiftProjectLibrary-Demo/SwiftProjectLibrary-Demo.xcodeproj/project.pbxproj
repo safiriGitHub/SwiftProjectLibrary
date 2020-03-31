@@ -7,16 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0356DA0724332DC5009D54E7 /* CustomCellInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356D9FC24332DC5009D54E7 /* CustomCellInfoTableVC.swift */; };
-		0356DA0824332DC5009D54E7 /* CustomCellTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356D9FD24332DC5009D54E7 /* CustomCellTableVC.swift */; };
-		0356DA0924332DC5009D54E7 /* CustomInputTFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356D9FF24332DC5009D54E7 /* CustomInputTFCell.swift */; };
-		0356DA0A24332DC5009D54E7 /* ShowDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA0024332DC5009D54E7 /* ShowDefaultCell.swift */; };
-		0356DA0B24332DC5009D54E7 /* CustomContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356DA0124332DC5009D54E7 /* CustomContentCell.xib */; };
-		0356DA0C24332DC5009D54E7 /* CustomContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA0224332DC5009D54E7 /* CustomContentCell.swift */; };
-		0356DA0D24332DC5009D54E7 /* CustomInputTFUnitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356DA0324332DC5009D54E7 /* CustomInputTFUnitCell.xib */; };
-		0356DA0E24332DC5009D54E7 /* ShowDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356DA0424332DC5009D54E7 /* ShowDefaultCell.xib */; };
-		0356DA0F24332DC5009D54E7 /* CustomInputTFUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA0524332DC5009D54E7 /* CustomInputTFUnitCell.swift */; };
-		0356DA1024332DC5009D54E7 /* CustomInputTFCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356DA0624332DC5009D54E7 /* CustomInputTFCell.xib */; };
+		03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A612433481800C657E6 /* CustomCellInfoTableVC.swift */; };
+		03380A672433481800C657E6 /* CustomCellTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A622433481800C657E6 /* CustomCellTableVC.swift */; };
+		03380A682433481800C657E6 /* ShowDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A642433481800C657E6 /* ShowDefaultCell.swift */; };
+		03380A692433481800C657E6 /* CustomContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A652433481800C657E6 /* CustomContentCell.swift */; };
 		0356DA1324332DD9009D54E7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */; };
 		0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */; };
 		03D648C3242F01A1007A713A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648C2242F01A1007A713A /* AppDelegate.swift */; };
@@ -38,16 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0356D9FC24332DC5009D54E7 /* CustomCellInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellInfoTableVC.swift; sourceTree = "<group>"; };
-		0356D9FD24332DC5009D54E7 /* CustomCellTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableVC.swift; sourceTree = "<group>"; };
-		0356D9FF24332DC5009D54E7 /* CustomInputTFCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputTFCell.swift; sourceTree = "<group>"; };
-		0356DA0024332DC5009D54E7 /* ShowDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDefaultCell.swift; sourceTree = "<group>"; };
-		0356DA0124332DC5009D54E7 /* CustomContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomContentCell.xib; sourceTree = "<group>"; };
-		0356DA0224332DC5009D54E7 /* CustomContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContentCell.swift; sourceTree = "<group>"; };
-		0356DA0324332DC5009D54E7 /* CustomInputTFUnitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInputTFUnitCell.xib; sourceTree = "<group>"; };
-		0356DA0424332DC5009D54E7 /* ShowDefaultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDefaultCell.xib; sourceTree = "<group>"; };
-		0356DA0524332DC5009D54E7 /* CustomInputTFUnitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputTFUnitCell.swift; sourceTree = "<group>"; };
-		0356DA0624332DC5009D54E7 /* CustomInputTFCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInputTFCell.xib; sourceTree = "<group>"; };
+		03380A612433481800C657E6 /* CustomCellInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellInfoTableVC.swift; sourceTree = "<group>"; };
+		03380A622433481800C657E6 /* CustomCellTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableVC.swift; sourceTree = "<group>"; };
+		03380A642433481800C657E6 /* ShowDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDefaultCell.swift; sourceTree = "<group>"; };
+		03380A652433481800C657E6 /* CustomContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContentCell.swift; sourceTree = "<group>"; };
 		0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailVC.swift; sourceTree = "<group>"; };
 		03D648BF242F01A1007A713A /* SwiftProjectLibrary-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftProjectLibrary-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,28 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0356D9FB24332DC5009D54E7 /* CustomCellTableVC */ = {
+		03380A602433481800C657E6 /* CustomCellTableVC */ = {
 			isa = PBXGroup;
 			children = (
-				0356D9FC24332DC5009D54E7 /* CustomCellInfoTableVC.swift */,
-				0356D9FD24332DC5009D54E7 /* CustomCellTableVC.swift */,
-				0356D9FE24332DC5009D54E7 /* CustomCell */,
+				03380A612433481800C657E6 /* CustomCellInfoTableVC.swift */,
+				03380A622433481800C657E6 /* CustomCellTableVC.swift */,
+				03380A632433481800C657E6 /* CustomCell */,
 			);
 			name = CustomCellTableVC;
 			path = SwiftProjectLibrary/CustomCellTableVC;
 			sourceTree = "<group>";
 		};
-		0356D9FE24332DC5009D54E7 /* CustomCell */ = {
+		03380A632433481800C657E6 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				0356D9FF24332DC5009D54E7 /* CustomInputTFCell.swift */,
-				0356DA0024332DC5009D54E7 /* ShowDefaultCell.swift */,
-				0356DA0124332DC5009D54E7 /* CustomContentCell.xib */,
-				0356DA0224332DC5009D54E7 /* CustomContentCell.swift */,
-				0356DA0324332DC5009D54E7 /* CustomInputTFUnitCell.xib */,
-				0356DA0424332DC5009D54E7 /* ShowDefaultCell.xib */,
-				0356DA0524332DC5009D54E7 /* CustomInputTFUnitCell.swift */,
-				0356DA0624332DC5009D54E7 /* CustomInputTFCell.xib */,
+				03380A642433481800C657E6 /* ShowDefaultCell.swift */,
+				03380A652433481800C657E6 /* CustomContentCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -152,8 +134,8 @@
 		03D648D6242F02CE007A713A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				03380A602433481800C657E6 /* CustomCellTableVC */,
 				0356DA1124332DD9009D54E7 /* Extension */,
-				0356D9FB24332DC5009D54E7 /* CustomCellTableVC */,
 				03D648D7242F02CE007A713A /* SwiftProjectLibrary */,
 			);
 			name = Sources;
@@ -264,10 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0356DA0B24332DC5009D54E7 /* CustomContentCell.xib in Resources */,
-				0356DA0D24332DC5009D54E7 /* CustomInputTFUnitCell.xib in Resources */,
-				0356DA0E24332DC5009D54E7 /* ShowDefaultCell.xib in Resources */,
-				0356DA1024332DC5009D54E7 /* CustomInputTFCell.xib in Resources */,
 				03D648CF242F01A6007A713A /* LaunchScreen.storyboard in Resources */,
 				03D648CC242F01A6007A713A /* Assets.xcassets in Resources */,
 				03D648CA242F01A1007A713A /* Main.storyboard in Resources */,
@@ -283,23 +261,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D648E4242F02CF007A713A /* LimitTextField.swift in Sources */,
-				0356DA0724332DC5009D54E7 /* CustomCellInfoTableVC.swift in Sources */,
+				03380A682433481800C657E6 /* ShowDefaultCell.swift in Sources */,
 				03D648E2242F02CF007A713A /* RegexUtil.swift in Sources */,
 				03D648C7242F01A1007A713A /* ViewController.swift in Sources */,
 				03D648E8242F02CF007A713A /* SwiftProjectLibrary.swift in Sources */,
+				03380A672433481800C657E6 /* CustomCellTableVC.swift in Sources */,
 				03D648C3242F01A1007A713A /* AppDelegate.swift in Sources */,
 				0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */,
+				03380A692433481800C657E6 /* CustomContentCell.swift in Sources */,
 				0356DA1324332DD9009D54E7 /* UITableView+Extension.swift in Sources */,
 				03D648E3242F02CF007A713A /* LoadBundleUtil.swift in Sources */,
 				03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */,
-				0356DA0C24332DC5009D54E7 /* CustomContentCell.swift in Sources */,
-				0356DA0A24332DC5009D54E7 /* ShowDefaultCell.swift in Sources */,
-				0356DA0924332DC5009D54E7 /* CustomInputTFCell.swift in Sources */,
-				0356DA0F24332DC5009D54E7 /* CustomInputTFUnitCell.swift in Sources */,
 				03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */,
 				03D648E5242F02CF007A713A /* LimitDecimalTextField.swift in Sources */,
-				0356DA0824332DC5009D54E7 /* CustomCellTableVC.swift in Sources */,
 				03D648E7242F02CF007A713A /* InputTextFieldView.swift in Sources */,
+				03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

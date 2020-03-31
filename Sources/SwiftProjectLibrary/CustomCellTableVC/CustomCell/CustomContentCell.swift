@@ -14,7 +14,16 @@ public class CustomContentCell: UITableViewCell, RegisterCellFromNib {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
+        contentView.addSubview(contentLabel)
+        contentLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        contentLabel.textColor = UIColor(hex: "333945")
+        
+        contentLabel.snp_makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.top.bottom.equalToSuperview()
+        }
     }
 
     public override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,6 +31,6 @@ public class CustomContentCell: UITableViewCell, RegisterCellFromNib {
 
         // Configure the view for the selected state
     }
-    @IBOutlet public weak var contentLabel: UILabel!
     
+    public let contentLabel = UILabel()
 }
