@@ -30,9 +30,11 @@ public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate 
     }
     
     public func customCellTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, tagString: String) -> UITableViewCell {
-        let cell = tableViewVC.tableView.zs_dequeueReusableCell(indexPath: indexPath) as ShowDefaultCell
-        cell.titleLabel.text = titleArray[indexPath.row]
-        cell.conLabel.text = contentArray[indexPath.row]
+        let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as ShowDefaultCell
+        if indexPath.row < titleArray.count {
+            cell.titleLabel.text = titleArray[indexPath.row]
+            cell.conLabel.text = contentArray[indexPath.row]
+        }
         return cell
     }
     
