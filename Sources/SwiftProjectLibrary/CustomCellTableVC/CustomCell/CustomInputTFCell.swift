@@ -13,12 +13,12 @@ public class CustomInputTFCell: UITableViewCell, RegisterCellFromNib {
     
     public static var height: CGFloat = 50
     
-    @IBOutlet weak var titlelabel: UILabel!
-    @IBOutlet weak var inputTFContentView: UIView!
-    @IBOutlet weak var starImageView: UIImageView!
-    @IBOutlet weak var accessoryImageView: UIImageView!
-    @IBOutlet weak var inputTFContentViewTrailing: NSLayoutConstraint!
-    @IBOutlet weak var inputTFContentViewLeading: NSLayoutConstraint!
+    @IBOutlet public weak var titlelabel: UILabel!
+    @IBOutlet public weak var inputTFContentView: UIView!
+    @IBOutlet public weak var starImageView: UIImageView!
+    @IBOutlet public weak var accessoryImageView: UIImageView!
+    @IBOutlet public weak var inputTFContentViewTrailing: NSLayoutConstraint!
+    @IBOutlet public weak var inputTFContentViewLeading: NSLayoutConstraint!
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,14 +26,14 @@ public class CustomInputTFCell: UITableViewCell, RegisterCellFromNib {
         accessoryImageView.isHidden = true
     }
     
-    enum inputCellStyle {
+    public enum inputCellStyle {
         case normal
         case starNormal
         case starNormal2
         case starImportant
         case noStarLeadingZero
     }
-    func configUIStyle(_ style: inputCellStyle) {
+    public func configUIStyle(_ style: inputCellStyle) {
         
         if style == .normal {
             titlelabel.textColor = UIColor(hex: "666666")
@@ -60,12 +60,12 @@ public class CustomInputTFCell: UITableViewCell, RegisterCellFromNib {
         }
     }
     
-    func clearSeparatorLine() {
+    public func clearSeparatorLine() {
         separatorInset = UIEdgeInsets(top: 0, left: frame.width, bottom: 0, right: 0)
     }
     
     
-    lazy var inputTF: UITextField = {
+    public lazy var inputTF: UITextField = {
         let tf = UITextField()
         inputTFContentView.addSubview(tf)
         tf.snp_makeConstraints { (make) in
@@ -76,7 +76,7 @@ public class CustomInputTFCell: UITableViewCell, RegisterCellFromNib {
         return tf
     }()
     
-    lazy var inputPhoneTF: LimitTextField = {
+    public lazy var inputPhoneTF: LimitTextField = {
         let tf = LimitTextField()
         inputTFContentView.addSubview(tf)
         tf.snp_makeConstraints { (make) in

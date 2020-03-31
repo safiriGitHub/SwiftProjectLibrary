@@ -11,8 +11,8 @@ import UIKit
 public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib {
     public static var height: CGFloat { 55 }
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var conLabel: UILabel!
+    @IBOutlet public weak var titleLabel: UILabel!
+    @IBOutlet public weak var conLabel: UILabel!
     
     public override func awakeFromNib() {
         super.awakeFromNib()

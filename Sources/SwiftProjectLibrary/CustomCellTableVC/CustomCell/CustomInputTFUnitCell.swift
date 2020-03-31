@@ -12,11 +12,11 @@ public class CustomInputTFUnitCell: UITableViewCell, RegisterCellFromNib {
     
     public static var height: CGFloat = 50
     
-    @IBOutlet weak var titlelabel: UILabel!
-    @IBOutlet weak var unitLabel: UILabel!
-    @IBOutlet weak var starImageView: UIImageView!
-    @IBOutlet weak var inputTFContentView: UIView!
-    @IBOutlet weak var inputTFContentViewLeading: NSLayoutConstraint!
+    @IBOutlet public weak var titlelabel: UILabel!
+    @IBOutlet public weak var unitLabel: UILabel!
+    @IBOutlet public weak var starImageView: UIImageView!
+    @IBOutlet public weak var inputTFContentView: UIView!
+    @IBOutlet public weak var inputTFContentViewLeading: NSLayoutConstraint!
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ public class CustomInputTFUnitCell: UITableViewCell, RegisterCellFromNib {
         
     }
     
-    lazy var inputTF: UITextField = {
+    public lazy var inputTF: UITextField = {
         let tf = UITextField()
         inputTFContentView.addSubview(tf)
         tf.snp_makeConstraints { (make) in
@@ -35,7 +35,7 @@ public class CustomInputTFUnitCell: UITableViewCell, RegisterCellFromNib {
         return tf
     }()
     
-    lazy var inputDecimalTF: LimitDecimalTextField = {
+    public lazy var inputDecimalTF: LimitDecimalTextField = {
         let tf = LimitDecimalTextField()
         inputTFContentView.addSubview(tf)
         tf.snp_makeConstraints { (make) in
@@ -47,15 +47,6 @@ public class CustomInputTFUnitCell: UITableViewCell, RegisterCellFromNib {
         return tf
     }()
     
-//    var inputType: CustomCellInputType = .None{
-//        willSet {
-//            if newValue == .Normal {
-//
-//            }else if newValue == .Decimal {
-//
-//            }
-//        }
-//    }
 
     public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

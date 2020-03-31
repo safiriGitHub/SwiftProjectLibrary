@@ -22,6 +22,6 @@ public class CustomContentCell: UITableViewCell, RegisterCellFromNib {
 
         // Configure the view for the selected state
     }
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet public weak var contentLabel: UILabel!
     
 }
