@@ -14,7 +14,7 @@ public enum RegularLimitType: String {
     case RegularNumbersLetters = "[^A-Za-z0-9]"
     case RegularIdCard = "[^xX0-9]"
     case RegularNumbers = "[^0-9]"
-    case RegularPasswordStyle1 = "[a-zA-Z0-9-*/+.~!@#$%^&*()]"
+    case RegularPasswordStyle1 = "[^a-zA-Z0-9-*/+.~!@#$%^&*()]"
 }
 
 public class LimitTextField: UITextField {
