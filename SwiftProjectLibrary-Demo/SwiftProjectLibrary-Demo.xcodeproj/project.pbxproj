@@ -13,6 +13,8 @@
 		03380A692433481800C657E6 /* CustomContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A652433481800C657E6 /* CustomContentCell.swift */; };
 		0356DA1324332DD9009D54E7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */; };
 		0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */; };
+		03A8BC90244D7133006C0214 /* LocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8BC8E244D7133006C0214 /* LocationUtil.swift */; };
+		03A8BC91244D7133006C0214 /* MapNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8BC8F244D7133006C0214 /* MapNavigationManager.swift */; };
 		03D648C3242F01A1007A713A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648C2242F01A1007A713A /* AppDelegate.swift */; };
 		03D648C7242F01A1007A713A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648C6242F01A1007A713A /* ViewController.swift */; };
 		03D648CA242F01A1007A713A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D648C8242F01A1007A713A /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		03380A652433481800C657E6 /* CustomContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContentCell.swift; sourceTree = "<group>"; };
 		0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailVC.swift; sourceTree = "<group>"; };
+		03A8BC8E244D7133006C0214 /* LocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtil.swift; sourceTree = "<group>"; };
+		03A8BC8F244D7133006C0214 /* MapNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNavigationManager.swift; sourceTree = "<group>"; };
 		03D648BF242F01A1007A713A /* SwiftProjectLibrary-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftProjectLibrary-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D648C2242F01A1007A713A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D648C6242F01A1007A713A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +80,7 @@
 				03380A622433481800C657E6 /* CustomCellTableVC.swift */,
 				03380A632433481800C657E6 /* CustomCell */,
 			);
-			name = CustomCellTableVC;
-			path = SwiftProjectLibrary/CustomCellTableVC;
+			path = CustomCellTableVC;
 			sourceTree = "<group>";
 		};
 		03380A632433481800C657E6 /* CustomCell */ = {
@@ -94,8 +97,16 @@
 			children = (
 				0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */,
 			);
-			name = Extension;
-			path = SwiftProjectLibrary/Extension;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		03A8BC8D244D7133006C0214 /* MapUtils */ = {
+			isa = PBXGroup;
+			children = (
+				03A8BC8E244D7133006C0214 /* LocationUtil.swift */,
+				03A8BC8F244D7133006C0214 /* MapNavigationManager.swift */,
+			);
+			path = MapUtils;
 			sourceTree = "<group>";
 		};
 		03D648B6242F01A1007A713A = {
@@ -134,8 +145,6 @@
 		03D648D6242F02CE007A713A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				03380A602433481800C657E6 /* CustomCellTableVC */,
-				0356DA1124332DD9009D54E7 /* Extension */,
 				03D648D7242F02CE007A713A /* SwiftProjectLibrary */,
 			);
 			name = Sources;
@@ -145,9 +154,11 @@
 		03D648D7242F02CE007A713A /* SwiftProjectLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */,
+				03380A602433481800C657E6 /* CustomCellTableVC */,
+				0356DA1124332DD9009D54E7 /* Extension */,
 				03D648DF242F02CE007A713A /* InputTextFieldView */,
 				03D648DB242F02CE007A713A /* LimitTextField */,
-				03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */,
 				03D648D8242F02CE007A713A /* Utils */,
 			);
 			path = SwiftProjectLibrary;
@@ -156,6 +167,7 @@
 		03D648D8242F02CE007A713A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				03A8BC8D244D7133006C0214 /* MapUtils */,
 				03D648D9242F02CE007A713A /* RegexUtil.swift */,
 				03D648DA242F02CE007A713A /* LoadBundleUtil.swift */,
 			);
@@ -274,8 +286,10 @@
 				03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */,
 				03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */,
 				03D648E5242F02CF007A713A /* LimitDecimalTextField.swift in Sources */,
+				03A8BC91244D7133006C0214 /* MapNavigationManager.swift in Sources */,
 				03D648E7242F02CF007A713A /* InputTextFieldView.swift in Sources */,
 				03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */,
+				03A8BC90244D7133006C0214 /* LocationUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,20 +8,20 @@
 
 import Foundation
 
-class LocationUtil {
+public class LocationUtil {
     
     /// 根据角度计算弧度
-    static func radian(d: Double) -> Double {
+    public static func radian(d: Double) -> Double {
         return d * Double.pi/180.0
     }
     
     /// 根据弧度计算角度
-    static func angle(r: Double) -> Double {
+    public static func angle(r: Double) -> Double {
         return r * 180.0/Double.pi
     }
     
     /// 根据两点经纬度计算两点距离
-    static func getDistance(lat1:Double, lng1:Double, lat2:Double, lng2:Double) -> Double {
+    public static func getDistance(lat1:Double, lng1:Double, lat2:Double, lng2:Double) -> Double {
         let EARTH_RADIUS:Double = 6378137.0 //地球半径 (单位：m)
         
         let radLat1:Double = self.radian(d: lat1)
@@ -42,7 +42,7 @@ class LocationUtil {
     
     
     //计算方位角
-    static func getBearing(lat1:Double, lng1:Double, lat2:Double, lng2:Double) -> Double {
+    public static func getBearing(lat1:Double, lng1:Double, lat2:Double, lng2:Double) -> Double {
         
         var d: Double = 0
         let radLat1:Double = radian(d: lat1)

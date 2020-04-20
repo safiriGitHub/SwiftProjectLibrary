@@ -10,9 +10,9 @@ import Foundation
 import MapKit
 
 /// 跳转到外部地图APP进行导航
-class MapNavigationManager {
+public class MapNavigationManager {
         
-    static func mapNavigation(lat: String, lng: String, present:UIViewController) {
+    public static func mapNavigation(lat: String, lng: String, present:UIViewController) {
         
         var maps = [Dictionary<String, String>]()
         
@@ -76,7 +76,7 @@ class MapNavigationManager {
     }
     
     //苹果地图
-    static func appleMapNavigation(lat: String, lng: String) {
+    public static func appleMapNavigation(lat: String, lng: String) {
         
         guard let d = Double(lat), let l = Double(lng) else {
             return
