@@ -250,13 +250,3 @@ public enum InputTextFieldViewType {
     case Normal, Password, Custom
 }
 
-private extension UIColor {
-    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a:CGFloat = 1.0) {
-        if #available(iOS 10.0, *) {
-            self.init(displayP3Red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
-        } else {
-            // Fallback on earlier versions
-            self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
-        }
-    }
-}
