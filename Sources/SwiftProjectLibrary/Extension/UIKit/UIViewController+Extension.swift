@@ -30,48 +30,6 @@ public extension NibLoadable {
 
 public extension UIViewController {
     
-    //MARK: - waiting cover view
-    
-    func showCoverUI() {
-        let coverView = UIView()
-        coverView.tag = 1001
-        coverView.backgroundColor = UIColor.appTextColor5
-        view.addSubview(coverView)
-        coverView.snp_makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-        showWaitingHUD(coverView)
-    }
-    
-    func showCoverUI(in inView: UIView) {
-           let coverView = UIView()
-           coverView.tag = 1001
-           coverView.backgroundColor = UIColor.appTextColor5
-           inView.addSubview(coverView)
-           coverView.snp_makeConstraints { (make) in
-               make.edges.equalToSuperview()
-           }
-           showWaitingHUD(coverView)
-       }
-    
-    func hideCoverUI() {
-        let v = view.viewWithTag(1001)
-        UIView.animate(withDuration: 0.4, animations: {
-            v?.alpha = 0
-        }) { (_) in
-            v?.removeFromSuperview()
-        }
-    }
-    
-    func hideCoverUI(in inView: UIView) {
-        let v = inView.viewWithTag(1001)
-        UIView.animate(withDuration: 0.4, animations: {
-            v?.alpha = 0
-        }) { (_) in
-            v?.removeFromSuperview()
-        }
-    }
-    
     //MARK: - 页面跳转控制
     func pushViewController(_ vc: UIViewController) {
         vc.hidesBottomBarWhenPushed = true

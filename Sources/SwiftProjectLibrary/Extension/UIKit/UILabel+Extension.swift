@@ -6,7 +6,7 @@
 //  Copyright © 2018年 safiri. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UILabel {
     func setHtmlString(_ htmlString: String) {
