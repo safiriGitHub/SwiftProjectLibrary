@@ -179,9 +179,9 @@ public extension UIViewController {
     }
     
     
-    @objc func backWard(){}
-    @objc func popBackWard(){}
-    @objc func rightBarButtonItemClick(){}
+    @objc open func backWard(){}
+    @objc open func popBackWard(){}
+    @objc open func rightBarButtonItemClick(){}
     
     //MARK: - alert
     
