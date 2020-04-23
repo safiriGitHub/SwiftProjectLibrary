@@ -61,6 +61,27 @@ public extension String {
         return beginSpace + self.removeHeadAndTailSpacePro
     }
     
+    /// 间隔指定位数插入指定字符串
+    /// - Parameters:
+    ///   - element: 指定字符串
+    ///   - step: 间隔步长
+    /// - Returns: 结果
+    func insert(_ element: String, step: Int) -> String {
+        var result = ""
+     
+        for i in 0..<self.count {
+            if i > 0 && i%step == 0 {
+                result.append(element)
+            }
+            let indexStart = self.startIndex
+            let index1 = self.index(indexStart, offsetBy: i)
+            let index2 = self.index(indexStart, offsetBy: i+1)
+            result.append(contentsOf: self[index1..<index2])
+        }
+        
+        return result
+    }
+    
     /// 添加中划线
     func addStrikethroughStyle() -> NSAttributedString {
         return NSAttributedString(string: self, attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
