@@ -77,6 +77,19 @@ public extension Date {
     }
     
     /**
+    Returns a date representing the receiver date shifted later by the provided number of months.
+    
+    @param months  Number of months to add.
+    @return Date modified by the number of desired months.
+    */
+    func timeDateByAddingMonths(_ months: Int) -> Date? {
+        let calendar = Calendar.current
+        var components = DateComponents()
+        components.month = months
+        return calendar.date(byAdding: components, to: self)
+    }
+    
+    /**
      Returns a formatted string representing this date.
      see http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
      for format description.
