@@ -38,6 +38,9 @@ public extension UIViewController {
     func popViewController() {
         navigationController?.popViewController(animated: true)
     }
+    func popToRootViewController() {
+        navigationController?.popToRootViewController(animated: true)
+    }
     
     /// 页面栈控制 - 截取给定VC之前的页面(不包括给定VC)
     func navigationViewControllersSubToVcClass(presentVCs: inout [UIViewController], _ toVc: UIViewController) {
