@@ -27,6 +27,7 @@ public class LimitDecimalTextField: LimitTextField {
     //TODO: 就算调出第三方键盘，也能控制输入
     public func decimal() {
         //keyboardType = .decimalPad 加上这行代码后，会调出第三方键盘。不知为何？ 目前暂时在xib中选decimalPad
+        regularLimitTypeCb = { .RegularDecimalNumbers }
         customOperationCb = { [weak self] (lastOprationStr, inputString) in
             var str = inputString
             if lastOprationStr.count <= str.count, let last = str.last {

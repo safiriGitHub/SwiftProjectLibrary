@@ -14,6 +14,7 @@ public enum RegularLimitType: String {
     case RegularNumbersLetters = "[^A-Za-z0-9]"
     case RegularIdCard = "[^xX0-9]"
     case RegularNumbers = "[^0-9]"
+    case RegularDecimalNumbers = "[^0-9.]"
     case RegularPasswordStyle1 = "[^a-zA-Z0-9-*/+.~!@#$%^&*()]"
     case RegularNoSpace = "[\\u00A0\\u0020\\u3000]"
     case RegularChineseNumbersLetters = "[^\\u4E00-\\u9FA5A-Za-z0-9]"
