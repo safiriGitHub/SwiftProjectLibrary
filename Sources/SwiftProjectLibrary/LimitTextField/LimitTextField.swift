@@ -15,7 +15,14 @@ public enum RegularLimitType: String {
     case RegularIdCard = "[^xX0-9]"
     case RegularNumbers = "[^0-9]"
     case RegularPasswordStyle1 = "[^a-zA-Z0-9-*/+.~!@#$%^&*()]"
+    case RegularNoSpace = "[\\u00A0\\u0020\\u3000]"
+    case RegularChineseNumbersLetters = "[^\\u4E00-\\u9FA5A-Za-z0-9]"
 }
+/**
+ 1.不间断空格\u00A0,主要用在office中,让一个单词在结尾处不会换行显示,快捷键ctrl+shift+space ;
+ 2.半角空格(英文符号)\u0020,代码中常用的;
+ 3.全角空格(中文符号)\u3000,中文文章中使用;
+ */
 
 public class LimitTextField: UITextField {
     
