@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0335780024640BB300470778 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F224640BB300470778 /* UIApplication+Extension.swift */; };
+		0335780124640BB300470778 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F324640BB300470778 /* UIDevice+Extension.swift */; };
+		0335780224640BB300470778 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F424640BB300470778 /* UIColor+Extension.swift */; };
+		0335780324640BB300470778 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F524640BB300470778 /* UILabel+Extension.swift */; };
+		0335780424640BB300470778 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F624640BB300470778 /* UIView+Extension.swift */; };
+		0335780524640BB300470778 /* UIView+Snapkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F724640BB300470778 /* UIView+Snapkit.swift */; };
+		0335780624640BB300470778 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F824640BB300470778 /* UIViewController+Extension.swift */; };
+		0335780724640BB300470778 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577F924640BB300470778 /* UITextView+Extension.swift */; };
+		0335780824640BB300470778 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577FA24640BB300470778 /* UITableView+Extension.swift */; };
+		0335780924640BB300470778 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577FC24640BB300470778 /* Int+Extension.swift */; };
+		0335780A24640BB300470778 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577FD24640BB300470778 /* Date+Extension.swift */; };
+		0335780B24640BB300470778 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577FE24640BB300470778 /* String+Extension.swift */; };
+		0335780C24640BB300470778 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033577FF24640BB300470778 /* UserDefaults+Extension.swift */; };
 		03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A612433481800C657E6 /* CustomCellInfoTableVC.swift */; };
 		03380A672433481800C657E6 /* CustomCellTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A622433481800C657E6 /* CustomCellTableVC.swift */; };
 		03380A682433481800C657E6 /* ShowDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A642433481800C657E6 /* ShowDefaultCell.swift */; };
 		03380A692433481800C657E6 /* CustomContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380A652433481800C657E6 /* CustomContentCell.swift */; };
-		0356DA1324332DD9009D54E7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */; };
 		0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */; };
 		03A8BC90244D7133006C0214 /* LocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8BC8E244D7133006C0214 /* LocationUtil.swift */; };
 		03A8BC91244D7133006C0214 /* MapNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8BC8F244D7133006C0214 /* MapNavigationManager.swift */; };
@@ -34,11 +46,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033577F224640BB300470778 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		033577F324640BB300470778 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		033577F424640BB300470778 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		033577F524640BB300470778 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		033577F624640BB300470778 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		033577F724640BB300470778 /* UIView+Snapkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Snapkit.swift"; sourceTree = "<group>"; };
+		033577F824640BB300470778 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		033577F924640BB300470778 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		033577FA24640BB300470778 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		033577FC24640BB300470778 /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		033577FD24640BB300470778 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		033577FE24640BB300470778 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		033577FF24640BB300470778 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		03380A612433481800C657E6 /* CustomCellInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellInfoTableVC.swift; sourceTree = "<group>"; };
 		03380A622433481800C657E6 /* CustomCellTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableVC.swift; sourceTree = "<group>"; };
 		03380A642433481800C657E6 /* ShowDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDefaultCell.swift; sourceTree = "<group>"; };
 		03380A652433481800C657E6 /* CustomContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContentCell.swift; sourceTree = "<group>"; };
-		0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		0356DA1524332E1E009D54E7 /* GoodsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailVC.swift; sourceTree = "<group>"; };
 		03A8BC8E244D7133006C0214 /* LocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtil.swift; sourceTree = "<group>"; };
 		03A8BC8F244D7133006C0214 /* MapNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNavigationManager.swift; sourceTree = "<group>"; };
@@ -73,6 +97,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033577F024640BB300470778 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				033577F124640BB300470778 /* UIKit */,
+				033577FB24640BB300470778 /* Foundation */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		033577F124640BB300470778 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				033577F224640BB300470778 /* UIApplication+Extension.swift */,
+				033577F324640BB300470778 /* UIDevice+Extension.swift */,
+				033577F424640BB300470778 /* UIColor+Extension.swift */,
+				033577F524640BB300470778 /* UILabel+Extension.swift */,
+				033577F624640BB300470778 /* UIView+Extension.swift */,
+				033577F724640BB300470778 /* UIView+Snapkit.swift */,
+				033577F824640BB300470778 /* UIViewController+Extension.swift */,
+				033577F924640BB300470778 /* UITextView+Extension.swift */,
+				033577FA24640BB300470778 /* UITableView+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		033577FB24640BB300470778 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				033577FC24640BB300470778 /* Int+Extension.swift */,
+				033577FD24640BB300470778 /* Date+Extension.swift */,
+				033577FE24640BB300470778 /* String+Extension.swift */,
+				033577FF24640BB300470778 /* UserDefaults+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		03380A602433481800C657E6 /* CustomCellTableVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,14 +150,6 @@
 				03380A652433481800C657E6 /* CustomContentCell.swift */,
 			);
 			path = CustomCell;
-			sourceTree = "<group>";
-		};
-		0356DA1124332DD9009D54E7 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				0356DA1224332DD9009D54E7 /* UITableView+Extension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		03A8BC8D244D7133006C0214 /* MapUtils */ = {
@@ -154,9 +206,9 @@
 		03D648D7242F02CE007A713A /* SwiftProjectLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				033577F024640BB300470778 /* Extension */,
 				03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */,
 				03380A602433481800C657E6 /* CustomCellTableVC */,
-				0356DA1124332DD9009D54E7 /* Extension */,
 				03D648DF242F02CE007A713A /* InputTextFieldView */,
 				03D648DB242F02CE007A713A /* LimitTextField */,
 				03D648D8242F02CE007A713A /* Utils */,
@@ -272,24 +324,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0335780624640BB300470778 /* UIViewController+Extension.swift in Sources */,
+				0335780424640BB300470778 /* UIView+Extension.swift in Sources */,
 				03D648E4242F02CF007A713A /* LimitTextField.swift in Sources */,
 				03380A682433481800C657E6 /* ShowDefaultCell.swift in Sources */,
 				03D648E2242F02CF007A713A /* RegexUtil.swift in Sources */,
 				03D648C7242F01A1007A713A /* ViewController.swift in Sources */,
+				0335780024640BB300470778 /* UIApplication+Extension.swift in Sources */,
 				03D648E8242F02CF007A713A /* SwiftProjectLibrary.swift in Sources */,
+				0335780724640BB300470778 /* UITextView+Extension.swift in Sources */,
 				03380A672433481800C657E6 /* CustomCellTableVC.swift in Sources */,
 				03D648C3242F01A1007A713A /* AppDelegate.swift in Sources */,
+				0335780124640BB300470778 /* UIDevice+Extension.swift in Sources */,
+				0335780924640BB300470778 /* Int+Extension.swift in Sources */,
 				0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */,
 				03380A692433481800C657E6 /* CustomContentCell.swift in Sources */,
-				0356DA1324332DD9009D54E7 /* UITableView+Extension.swift in Sources */,
 				03D648E3242F02CF007A713A /* LoadBundleUtil.swift in Sources */,
 				03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */,
 				03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */,
 				03D648E5242F02CF007A713A /* LimitDecimalTextField.swift in Sources */,
+				0335780524640BB300470778 /* UIView+Snapkit.swift in Sources */,
 				03A8BC91244D7133006C0214 /* MapNavigationManager.swift in Sources */,
 				03D648E7242F02CF007A713A /* InputTextFieldView.swift in Sources */,
+				0335780324640BB300470778 /* UILabel+Extension.swift in Sources */,
 				03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */,
 				03A8BC90244D7133006C0214 /* LocationUtil.swift in Sources */,
+				0335780A24640BB300470778 /* Date+Extension.swift in Sources */,
+				0335780224640BB300470778 /* UIColor+Extension.swift in Sources */,
+				0335780B24640BB300470778 /* String+Extension.swift in Sources */,
+				0335780C24640BB300470778 /* UserDefaults+Extension.swift in Sources */,
+				0335780824640BB300470778 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,9 +28,9 @@ public class LimitDecimalTextField: LimitTextField {
     public func decimal() {
         //keyboardType = .decimalPad 加上这行代码后，会调出第三方键盘。不知为何？ 目前暂时在xib中选decimalPad
         regularLimitTypeCb = { .RegularDecimalNumbers }
-        customOperationCb = { [weak self] (lastOprationStr, inputString) in
-            var str = inputString
-            if lastOprationStr.count <= str.count, let last = str.last {
+        customOperationCb = { [weak self] (result, inputString) in
+            var str = result
+            if let last = str.last {
              
                 if ((last >= "0" && last <= "9") || last == ".") {
                     
@@ -46,15 +46,7 @@ public class LimitDecimalTextField: LimitTextField {
                             str = String(str.prefix(str.count-1))
                         }
                     }
-                    else if last == "0" {
-                        let count = str.components(separatedBy: "0").count
-                        // 如果第一位是0则后面必须输入点，否则不能输入。
-                        if count == 2 {
-                            if str.hasPrefix("0") {
-                                str = str+"."
-                            }
-                        }
-                    }
+                    
                     
                     // 小数点后最多能输入两位
                     if str.contains(".") {

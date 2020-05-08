@@ -3,15 +3,18 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Demo1VC" customModule="SwiftProjectLibrary_Demo" customModuleProvider="target">
             <connections>
+                <outlet property="bankTF" destination="J2W-Um-o3i" id="shF-4f-Hcl"/>
                 <outlet property="inputDecimalTF" destination="UCL-Mh-zu1" id="4v9-lE-4yr"/>
                 <outlet property="inputTFContentView" destination="cXn-KH-wcf" id="Iuy-gX-CQu"/>
+                <outlet property="testTF" destination="jPe-Iv-PvE" id="f7x-zo-TMH"/>
+                <outlet property="testTF1" destination="gu4-gS-aWc" id="0Py-OT-6oa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,15 +35,37 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPe-Iv-PvE" customClass="LimitTextField" customModule="SwiftProjectLibrary_Demo" customModuleProvider="target">
+                    <rect key="frame" x="50" y="335" width="314" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-gS-aWc" customClass="LimitTextField" customModule="SwiftProjectLibrary_Demo" customModuleProvider="target">
+                    <rect key="frame" x="50" y="389" width="314" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-Um-o3i" customClass="LimitBankCardTextField" customModule="SwiftProjectLibrary_Demo" customModuleProvider="target">
+                    <rect key="frame" x="50" y="445" width="314" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cXn-KH-wcf" secondAttribute="trailing" id="2Ww-dm-3Ba"/>
+                <constraint firstItem="gu4-gS-aWc" firstAttribute="trailing" secondItem="jPe-Iv-PvE" secondAttribute="trailing" id="7on-lf-koC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UCL-Mh-zu1" secondAttribute="trailing" constant="50" id="ETj-yF-4iI"/>
                 <constraint firstItem="UCL-Mh-zu1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Hem-PI-EEd"/>
+                <constraint firstItem="gu4-gS-aWc" firstAttribute="top" secondItem="jPe-Iv-PvE" secondAttribute="bottom" constant="20" id="Mwj-Bi-t8S"/>
+                <constraint firstItem="gu4-gS-aWc" firstAttribute="leading" secondItem="jPe-Iv-PvE" secondAttribute="leading" id="Mx6-7j-VuH"/>
                 <constraint firstItem="cXn-KH-wcf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OJu-SA-g01"/>
                 <constraint firstItem="UCL-Mh-zu1" firstAttribute="top" secondItem="cXn-KH-wcf" secondAttribute="bottom" constant="88" id="Rnd-5L-47K"/>
+                <constraint firstItem="jPe-Iv-PvE" firstAttribute="top" secondItem="UCL-Mh-zu1" secondAttribute="bottom" constant="30" id="UI8-Ti-xbv"/>
+                <constraint firstItem="jPe-Iv-PvE" firstAttribute="leading" secondItem="UCL-Mh-zu1" secondAttribute="leading" id="aAU-5T-cQI"/>
                 <constraint firstItem="cXn-KH-wcf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="mS9-AD-WKa"/>
+                <constraint firstItem="jPe-Iv-PvE" firstAttribute="trailing" secondItem="UCL-Mh-zu1" secondAttribute="trailing" id="xrL-xB-3jD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="94"/>
