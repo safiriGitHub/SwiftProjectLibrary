@@ -130,6 +130,8 @@ public class LimitTextField: UITextField {
     public var uppercasedLimitCb: (()->Bool)?
     /// 自定义操作回调
     public var customOperationCb:((_ lastOperationString: String, _ inputString: String)->String)?
+    /// 完成输入回调
+    public var completeTextCb:((_ text: String)->Void)?
     
     private lazy var lastOprationStr: String = self.text!
     
@@ -175,15 +177,17 @@ extension LimitTextField: UITextFieldDelegate {
             }
             //result = result.substring(to: min(result.length, length)) as NSString
         }
-        self.text = result as String
+        var text = result as String
+        self.text = text
         lastOprationStr = result as String
         setSelectedRange(NSMakeRange(selectedRange.location+count-range.length, selectedRange.length))
 
         //operation
         if let op = customOperationCb {
-            self.text = op(lastOprationStr, input)
+            text = op(lastOprationStr, input)
+            self.text = text
         }
-        
+        completeTextCb?(text)
         return false
     }
     
