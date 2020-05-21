@@ -188,6 +188,7 @@ extension LimitTextField: UITextFieldDelegate {
             self.text = text
         }
         completeTextCb?(text)
+        self.sendActions(for: .allEditingEvents)
         return false
     }
     
