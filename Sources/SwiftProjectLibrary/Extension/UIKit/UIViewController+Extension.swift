@@ -93,7 +93,7 @@ public extension UIViewController {
     //MARK: - Navigation Config
     
     func customSystemBackItem(withImage imgName: String) {
-        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backWard))
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: imgName)
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: imgName)
