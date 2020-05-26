@@ -9,22 +9,25 @@
 import UIKit
 
 class GoodsDetailVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "货源详情"
+        view.backgroundColor = UIColor.white
+        customSystemBackItem(withImage: "nav_back")
         
         configUI()
         refreshUI()
     }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
     
     func configUI() {
-       
+        
         baseInfoVC.sectionHeaderTitle = "货物信息"
         view.addSubview(baseInfoVC.view)
         self.addChild(baseInfoVC)
@@ -35,17 +38,17 @@ class GoodsDetailVC: UIViewController {
     }
     func refreshUI() {
         
-                baseInfoVC.titleArray = ["货物名称","合理货损","货物单价"]
-                //let unitEx = gs.goodsUnit.goodsUnitEx()
-                baseInfoVC.contentArray = ["货物名称","合理货损","货物单价"]
-
-            
-            baseInfoVC.reloadData()
-           
+        baseInfoVC.titleArray = ["货物名称","合理货损","货物单价"]
+        //let unitEx = gs.goodsUnit.goodsUnitEx()
+        baseInfoVC.contentArray = ["货物名称","合理货损","货物单价"]
+        
+        
+        baseInfoVC.reloadData()
+        
     }
     
-
+    
     
     let baseInfoVC = CustomCellInfoTableVC()
- 
+    
 }

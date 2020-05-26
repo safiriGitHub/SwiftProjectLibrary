@@ -64,6 +64,9 @@ class Demo1VC: UIViewController, UITextFieldDelegate {
         return phoneInputTFView
     }()
     
+    @IBAction func push(_ sender: Any) {
+        navigationController?.pushViewController(PopInterceptDemoVC(), animated: true)
+    }
     
     @IBOutlet weak var inputDecimalTF: LimitDecimalTextField!
     @IBOutlet weak var testTF: LimitTextField!
