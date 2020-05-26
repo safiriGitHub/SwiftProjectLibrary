@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController, UINavigationBarDelegate, UINavigationControllerDelegate {
+public class BaseNavigationController: UINavigationController, UINavigationBarDelegate, UINavigationControllerDelegate {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
     }
@@ -21,20 +21,20 @@ class BaseNavigationController: UINavigationController, UINavigationBarDelegate,
         }
     }
     
-    func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
+    public func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
         //print("didPush")
     }
 
-    func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
+    public func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
         //print("shouldPush")
         return true
     }
 
-    func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
+    public func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
         //print("didPop")
     }
 
-    func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
+    public func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
         //print("shouldPop")
         guard let items = navigationBar.items else {
             return false
@@ -53,7 +53,7 @@ class BaseNavigationController: UINavigationController, UINavigationBarDelegate,
     
     
     // 重写 push 操作
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
         }
@@ -61,13 +61,13 @@ class BaseNavigationController: UINavigationController, UINavigationBarDelegate,
     }
     
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     /// 控制状态栏颜色
-    override var childForStatusBarStyle: UIViewController? {
+    public override var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
     
