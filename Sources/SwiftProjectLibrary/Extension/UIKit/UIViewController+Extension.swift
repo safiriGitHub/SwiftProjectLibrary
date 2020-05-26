@@ -27,7 +27,6 @@ public extension NibLoadable {
     }
 }
 
-
 public extension UIViewController {
     
     //MARK: - 页面跳转控制
@@ -93,7 +92,7 @@ public extension UIViewController {
     //MARK: - Navigation Config
     
     func customSystemBackItem(withImage imgName: String) {
-        let backItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backWard))
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: imgName)
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: imgName)
