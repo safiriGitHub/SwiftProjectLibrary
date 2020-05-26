@@ -43,6 +43,7 @@
 		03D648EE242F04B7007A713A /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 03D648ED242F04B7007A713A /* Hue */; };
 		03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648EF242F18C0007A713A /* Demo1VC.swift */; };
 		03D648F2242F18C0007A713A /* Demo1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D648F0242F18C0007A713A /* Demo1VC.xib */; };
+		5B63C772247CB0E000B0A939 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */; };
 		5B6524C2247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */; };
 		5B6524C5247BBF95003F6A52 /* ZSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */; };
 		5B6524C7247BC9F1003F6A52 /* PopInterceptDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C6247BC9F1003F6A52 /* PopInterceptDemoVC.swift */; };
@@ -85,6 +86,7 @@
 		03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftProjectLibrary.swift; sourceTree = "<group>"; };
 		03D648EF242F18C0007A713A /* Demo1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1VC.swift; sourceTree = "<group>"; };
 		03D648F0242F18C0007A713A /* Demo1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Demo1VC.xib; sourceTree = "<group>"; };
+		5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarBackButtonHandler.swift; sourceTree = "<group>"; };
 		5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSNavigationController.swift; sourceTree = "<group>"; };
 		5B6524C6247BC9F1003F6A52 /* PopInterceptDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInterceptDemoVC.swift; sourceTree = "<group>"; };
@@ -213,8 +215,9 @@
 		03D648D7242F02CE007A713A /* SwiftProjectLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				033577F024640BB300470778 /* Extension */,
 				03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */,
+				5B63C770247CB0C400B0A939 /* APPFunc */,
+				033577F024640BB300470778 /* Extension */,
 				03380A602433481800C657E6 /* CustomCellTableVC */,
 				03D648DF242F02CE007A713A /* InputTextFieldView */,
 				03D648DB242F02CE007A713A /* LimitTextField */,
@@ -249,6 +252,14 @@
 				03D648E0242F02CE007A713A /* InputTextFieldView.swift */,
 			);
 			path = InputTextFieldView;
+			sourceTree = "<group>";
+		};
+		5B63C770247CB0C400B0A939 /* APPFunc */ = {
+			isa = PBXGroup;
+			children = (
+				5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */,
+			);
+			path = APPFunc;
 			sourceTree = "<group>";
 		};
 		5B6524C3247BBEEE003F6A52 /* NavigationController返回拦截 */ = {
@@ -355,6 +366,7 @@
 				0335780124640BB300470778 /* UIDevice+Extension.swift in Sources */,
 				0335780924640BB300470778 /* Int+Extension.swift in Sources */,
 				0356DA1724332E1E009D54E7 /* GoodsDetailVC.swift in Sources */,
+				5B63C772247CB0E000B0A939 /* BaseNavigationController.swift in Sources */,
 				03380A692433481800C657E6 /* CustomContentCell.swift in Sources */,
 				03D648E3242F02CF007A713A /* LoadBundleUtil.swift in Sources */,
 				03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */,
