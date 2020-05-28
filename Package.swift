@@ -19,9 +19,9 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         //.package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.0.0"),
         //.package(url: "https://github.com/SnapKit/SnapKit.git", Package.Dependency.Requirement._exactItem("4.2.0")),
-        .package(url: "https://github.com/safiriGitHub/SnapKit.git", Package.Dependency.Requirement._exactItem("4.2.1")),
+        .package(url: "https://gitee.com/safiri/SnapKit.git", Package.Dependency.Requirement._exactItem("4.2.1")),
         //.package(url: "https://github.com/safiriGitHub/OCProjectLibrary.git", Package.Dependency.Requirement._branchItem("master")),
-        .package(url: "https://github.com/zenangst/Hue.git", from: "5.0.0"),
+        .package(url: "https://gitee.com/safiri/Hue.git", from: "5.0.0"),
         //.package(url: "https://github.com/safiriGitHub/Kingfisher.git", from: "5.13.4")
     ],
     targets: [
