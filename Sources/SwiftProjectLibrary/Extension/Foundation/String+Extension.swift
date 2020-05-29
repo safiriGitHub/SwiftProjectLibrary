@@ -82,6 +82,12 @@ public extension String {
         return result
     }
     
+    /// 转成银行卡显示格式（每隔4位加一个空格）
+    func addBankcardFormat() -> String {
+        let bc = self.replacingOccurrences(of: " ", with: "")
+        return bc.insert(" ", step: 4)
+    }
+    
     /// 添加中划线
     func addStrikethroughStyle() -> NSAttributedString {
         return NSAttributedString(string: self, attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
