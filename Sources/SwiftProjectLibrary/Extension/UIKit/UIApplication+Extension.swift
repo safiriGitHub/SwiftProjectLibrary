@@ -13,4 +13,13 @@ public extension UIApplication {
         return Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     }
     
+    static func openSetting() {
+        if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(settingsUrl)
+            }
+        }
+    }
 }
