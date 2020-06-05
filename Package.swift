@@ -23,7 +23,7 @@ let package = Package(
         //.package(url: "https://github.com/safiriGitHub/OCProjectLibrary.git", Package.Dependency.Requirement._branchItem("master")),
         .package(url: "https://gitee.com/safiri/Hue.git", from: "5.0.0"),
         //.package(url: "https://github.com/safiriGitHub/Kingfisher.git", from: "5.13.4")
-        .package(path: "https://github.com/Alamofire/Alamofire.git")
+        .package(url: "https://gitee.com/mirrors/alamofire.git", from: "4.9.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -31,7 +31,7 @@ let package = Package(
         .target(
             name: "SwiftProjectLibrary",
             //dependencies: ["SnapKit", "OCProjectLibrary"]
-            dependencies: ["SnapKit", "Hue"]
+            dependencies: ["SnapKit", "Hue", "Alamofire"]
         ),
         .testTarget(
             name: "SwiftProjectLibraryTests",
