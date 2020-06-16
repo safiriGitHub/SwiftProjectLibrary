@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var inputTFContentView: UIView!
-   
+    
+    
+    @IBAction func mvvmdemo1(_ sender: Any) {
+        navigationController?.pushViewController(MvvmViewController(), animated: true)
+    }
+    
 }
 

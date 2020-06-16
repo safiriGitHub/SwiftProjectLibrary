@@ -47,6 +47,10 @@
 		5B6524C2247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */; };
 		5B6524C5247BBF95003F6A52 /* ZSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */; };
 		5B6524C7247BC9F1003F6A52 /* PopInterceptDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C6247BC9F1003F6A52 /* PopInterceptDemoVC.swift */; };
+		5B6559C4249209AD008E86BB /* ViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6559C3249209AD008E86BB /* ViewModelInterface.swift */; };
+		5B6559C624921C2F008E86BB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6559C524921C2F008E86BB /* ViewModel.swift */; };
+		5B6559CF2492267B008E86BB /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6559CD2492267B008E86BB /* MvvmViewController.swift */; };
+		5B6559D02492267B008E86BB /* MvvmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6559CE2492267B008E86BB /* MvvmViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarBackButtonHandler.swift; sourceTree = "<group>"; };
 		5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSNavigationController.swift; sourceTree = "<group>"; };
 		5B6524C6247BC9F1003F6A52 /* PopInterceptDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInterceptDemoVC.swift; sourceTree = "<group>"; };
+		5B6559C3249209AD008E86BB /* ViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelInterface.swift; sourceTree = "<group>"; };
+		5B6559C524921C2F008E86BB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5B6559CD2492267B008E86BB /* MvvmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
+		5B6559CE2492267B008E86BB /* MvvmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MvvmViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 		03D648C1242F01A1007A713A /* SwiftProjectLibrary-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5B6559C2249208E0008E86BB /* MVVMDemo1 */,
 				5B6524C3247BBEEE003F6A52 /* NavigationController返回拦截 */,
 				03D648C2242F01A1007A713A /* AppDelegate.swift */,
 				03D648EF242F18C0007A713A /* Demo1VC.swift */,
@@ -272,6 +281,17 @@
 			path = "NavigationController返回拦截";
 			sourceTree = "<group>";
 		};
+		5B6559C2249208E0008E86BB /* MVVMDemo1 */ = {
+			isa = PBXGroup;
+			children = (
+				5B6559C3249209AD008E86BB /* ViewModelInterface.swift */,
+				5B6559C524921C2F008E86BB /* ViewModel.swift */,
+				5B6559CD2492267B008E86BB /* MvvmViewController.swift */,
+				5B6559CE2492267B008E86BB /* MvvmViewController.xib */,
+			);
+			path = MVVMDemo1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6559D02492267B008E86BB /* MvvmViewController.xib in Resources */,
 				03D648CF242F01A6007A713A /* LaunchScreen.storyboard in Resources */,
 				03D648CC242F01A6007A713A /* Assets.xcassets in Resources */,
 				03D648CA242F01A1007A713A /* Main.storyboard in Resources */,
@@ -359,9 +380,11 @@
 				03D648E2242F02CF007A713A /* RegexUtil.swift in Sources */,
 				03D648C7242F01A1007A713A /* ViewController.swift in Sources */,
 				0335780024640BB300470778 /* UIApplication+Extension.swift in Sources */,
+				5B6559CF2492267B008E86BB /* MvvmViewController.swift in Sources */,
 				03D648E8242F02CF007A713A /* SwiftProjectLibrary.swift in Sources */,
 				0335780724640BB300470778 /* UITextView+Extension.swift in Sources */,
 				03380A672433481800C657E6 /* CustomCellTableVC.swift in Sources */,
+				5B6559C624921C2F008E86BB /* ViewModel.swift in Sources */,
 				03D648C3242F01A1007A713A /* AppDelegate.swift in Sources */,
 				0335780124640BB300470778 /* UIDevice+Extension.swift in Sources */,
 				0335780924640BB300470778 /* Int+Extension.swift in Sources */,
@@ -371,6 +394,7 @@
 				03D648E3242F02CF007A713A /* LoadBundleUtil.swift in Sources */,
 				03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */,
 				03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */,
+				5B6559C4249209AD008E86BB /* ViewModelInterface.swift in Sources */,
 				03D648E5242F02CF007A713A /* LimitDecimalTextField.swift in Sources */,
 				0335780524640BB300470778 /* UIView+Snapkit.swift in Sources */,
 				5B6524C7247BC9F1003F6A52 /* PopInterceptDemoVC.swift in Sources */,
