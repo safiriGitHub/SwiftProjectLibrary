@@ -39,10 +39,10 @@
 		03D648E6242F02CF007A713A /* LimitBankCardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648DE242F02CE007A713A /* LimitBankCardTextField.swift */; };
 		03D648E7242F02CF007A713A /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648E0242F02CE007A713A /* InputTextFieldView.swift */; };
 		03D648E8242F02CF007A713A /* SwiftProjectLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */; };
-		03D648EB242F03B1007A713A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03D648EA242F03B1007A713A /* SnapKit */; };
-		03D648EE242F04B7007A713A /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 03D648ED242F04B7007A713A /* Hue */; };
 		03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648EF242F18C0007A713A /* Demo1VC.swift */; };
 		03D648F2242F18C0007A713A /* Demo1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D648F0242F18C0007A713A /* Demo1VC.xib */; };
+		5B63673C249B041A00C03FB7 /* AlamofireReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63673B249B041A00C03FB7 /* AlamofireReachability.swift */; };
+		5B63673F249B049C00C03FB7 /* SwiftProjectLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */; };
 		5B63C772247CB0E000B0A939 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */; };
 		5B6524C2247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */; };
 		5B6524C5247BBF95003F6A52 /* ZSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */; };
@@ -90,6 +90,7 @@
 		03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftProjectLibrary.swift; sourceTree = "<group>"; };
 		03D648EF242F18C0007A713A /* Demo1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1VC.swift; sourceTree = "<group>"; };
 		03D648F0242F18C0007A713A /* Demo1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Demo1VC.xib; sourceTree = "<group>"; };
+		5B63673B249B041A00C03FB7 /* AlamofireReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireReachability.swift; sourceTree = "<group>"; };
 		5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarBackButtonHandler.swift; sourceTree = "<group>"; };
 		5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSNavigationController.swift; sourceTree = "<group>"; };
@@ -105,8 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D648EB242F03B1007A713A /* SnapKit in Frameworks */,
-				03D648EE242F04B7007A713A /* Hue in Frameworks */,
+				5B63673F249B049C00C03FB7 /* SwiftProjectLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				03D648E1242F02CE007A713A /* SwiftProjectLibrary.swift */,
+				5B63673A249B041A00C03FB7 /* Network */,
 				5B63C770247CB0C400B0A939 /* APPFunc */,
 				033577F024640BB300470778 /* Extension */,
 				03380A602433481800C657E6 /* CustomCellTableVC */,
@@ -261,6 +262,14 @@
 				03D648E0242F02CE007A713A /* InputTextFieldView.swift */,
 			);
 			path = InputTextFieldView;
+			sourceTree = "<group>";
+		};
+		5B63673A249B041A00C03FB7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5B63673B249B041A00C03FB7 /* AlamofireReachability.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		5B63C770247CB0C400B0A939 /* APPFunc */ = {
@@ -309,8 +318,7 @@
 			);
 			name = "SwiftProjectLibrary-Demo";
 			packageProductDependencies = (
-				03D648EA242F03B1007A713A /* SnapKit */,
-				03D648ED242F04B7007A713A /* Hue */,
+				5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */,
 			);
 			productName = "SwiftProjectLibrary-Demo";
 			productReference = 03D648BF242F01A1007A713A /* SwiftProjectLibrary-Demo.app */;
@@ -341,8 +349,7 @@
 			);
 			mainGroup = 03D648B6242F01A1007A713A;
 			packageReferences = (
-				03D648E9242F03B1007A713A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				03D648EC242F04B7007A713A /* XCRemoteSwiftPackageReference "Hue" */,
+				5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */,
 			);
 			productRefGroup = 03D648C0242F01A1007A713A /* Products */;
 			projectDirPath = "";
@@ -404,6 +411,7 @@
 				03380A662433481800C657E6 /* CustomCellInfoTableVC.swift in Sources */,
 				5B6524C5247BBF95003F6A52 /* ZSNavigationController.swift in Sources */,
 				03A8BC90244D7133006C0214 /* LocationUtil.swift in Sources */,
+				5B63673C249B041A00C03FB7 /* AlamofireReachability.swift in Sources */,
 				5B6524C2247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift in Sources */,
 				0335780A24640BB300470778 /* Date+Extension.swift in Sources */,
 				0335780224640BB300470778 /* UIColor+Extension.swift in Sources */,
@@ -611,34 +619,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03D648E9242F03B1007A713A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/safiriGitHub/SnapKit.git";
+			repositoryURL = "git@git.qiluys.cn:yunshun/swift-package-manager/swiftprojectlibrary.git";
 			requirement = {
-				kind = exactVersion;
-				version = 4.2.1;
-			};
-		};
-		03D648EC242F04B7007A713A /* XCRemoteSwiftPackageReference "Hue" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/zenangst/Hue.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		03D648EA242F03B1007A713A /* SnapKit */ = {
+		5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03D648E9242F03B1007A713A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		03D648ED242F04B7007A713A /* Hue */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03D648EC242F04B7007A713A /* XCRemoteSwiftPackageReference "Hue" */;
-			productName = Hue;
+			package = 5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */;
+			productName = SwiftProjectLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
