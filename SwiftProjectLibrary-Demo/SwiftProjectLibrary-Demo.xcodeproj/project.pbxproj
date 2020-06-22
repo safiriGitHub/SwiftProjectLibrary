@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,7 +42,6 @@
 		03D648F1242F18C0007A713A /* Demo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D648EF242F18C0007A713A /* Demo1VC.swift */; };
 		03D648F2242F18C0007A713A /* Demo1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D648F0242F18C0007A713A /* Demo1VC.xib */; };
 		5B63673C249B041A00C03FB7 /* AlamofireReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63673B249B041A00C03FB7 /* AlamofireReachability.swift */; };
-		5B63673F249B049C00C03FB7 /* SwiftProjectLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */; };
 		5B63C772247CB0E000B0A939 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63C771247CB0E000B0A939 /* BaseNavigationController.swift */; };
 		5B6524C2247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C1247BB66B003F6A52 /* UINavigationBarBackButtonHandler.swift */; };
 		5B6524C5247BBF95003F6A52 /* ZSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6524C4247BBF95003F6A52 /* ZSNavigationController.swift */; };
@@ -106,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B63673F249B049C00C03FB7 /* SwiftProjectLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +316,6 @@
 			);
 			name = "SwiftProjectLibrary-Demo";
 			packageProductDependencies = (
-				5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */,
 			);
 			productName = "SwiftProjectLibrary-Demo";
 			productReference = 03D648BF242F01A1007A713A /* SwiftProjectLibrary-Demo.app */;
@@ -349,7 +346,6 @@
 			);
 			mainGroup = 03D648B6242F01A1007A713A;
 			packageReferences = (
-				5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */,
 			);
 			productRefGroup = 03D648C0242F01A1007A713A /* Products */;
 			projectDirPath = "";
@@ -564,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92L79PPZSZ;
 				INFOPLIST_FILE = "SwiftProjectLibrary-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,7 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92L79PPZSZ;
 				INFOPLIST_FILE = "SwiftProjectLibrary-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,25 +613,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@git.qiluys.cn:yunshun/swift-package-manager/swiftprojectlibrary.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5B63673E249B049C00C03FB7 /* SwiftProjectLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5B63673D249B049C00C03FB7 /* XCRemoteSwiftPackageReference "swiftprojectlibrary" */;
-			productName = SwiftProjectLibrary;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03D648B7242F01A1007A713A /* Project object */;
 }
