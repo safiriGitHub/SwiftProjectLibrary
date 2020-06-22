@@ -32,6 +32,8 @@ public extension UIViewController {
     //MARK: - 页面跳转控制
     func pushViewController(_ vc: UIViewController) {
         vc.hidesBottomBarWhenPushed = true
+        // 去掉文字显示
+        vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func popViewController() {
