@@ -57,6 +57,8 @@ public class BaseNavigationController: UINavigationController, UINavigationBarDe
         if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
         }
+        // 去掉文字显示
+        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         super.pushViewController(viewController, animated: animated)
     }
     
