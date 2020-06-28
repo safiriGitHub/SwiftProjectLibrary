@@ -15,7 +15,7 @@ public class BaseNavigationController: UINavigationController, UINavigationBarDe
         
     }
     
-    var rootViewController: UIViewController? {
+    public var rootViewController: UIViewController? {
         didSet {
             self.delegate = self
         }
@@ -62,6 +62,10 @@ public class BaseNavigationController: UINavigationController, UINavigationBarDe
         super.pushViewController(viewController, animated: animated)
     }
     
+    public func pushViewControllerNoHidden(_ viewController: UIViewController, animated: Bool) {
+        pushViewController(viewController, animated: animated)
+        setNavigationBarHidden(false, animated: true)
+    }
     
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
