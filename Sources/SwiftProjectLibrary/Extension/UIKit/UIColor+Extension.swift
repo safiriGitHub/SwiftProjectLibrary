@@ -21,57 +21,57 @@ public extension UIColor {
     }
     
     /// 随机颜色
-    static public var randomColor: UIColor {
+    static var randomColor: UIColor {
         return UIColor.init(red: (((CGFloat)((arc4random() % 256)) / 255.0)), green: (((CGFloat)((arc4random() % 256)) / 255.0)), blue: (((CGFloat)((arc4random() % 256)) / 255.0)), alpha: 1.0);
     }
     
     ///APP字体颜色 标题 333945
-    static public var appTextColor1: UIColor {
+    static var appTextColor1: UIColor {
         return UIColor.init(r: 51, g: 57, b: 69)
     }
     
     ///APP字体颜色 正文 5B6469
-    static public var appTextColor2: UIColor {
+    static var appTextColor2: UIColor {
         return UIColor.init(r: 91, g: 100, b: 105)
     }
     
     ///APP字体颜色 注释 9B9FAA
-    static public var appTextColor3: UIColor {
+    static var appTextColor3: UIColor {
         return UIColor.init(r: 155, g: 159, b: 170)
     }
     
     ///APP字体颜色 分隔线 E8E8E8
-    static public var appTextColor4: UIColor {
+    static var appTextColor4: UIColor {
         return UIColor.init(r: 232, g: 232, b: 232)
     }
     
     ///APP字体颜色 背景色 F5F6F7
-    static public var appTextColor5: UIColor {
+    static var appTextColor5: UIColor {
         return UIColor.init(r: 245, g: 246, b: 247)
     }
     
     ///APP设计红 FE292B
-    static public var appDesignRedColor: UIColor {
+    static var appDesignRedColor: UIColor {
         return UIColor.init(r: 254, g: 41, b: 43)
     }
     
     /// 暗红 e41937
-    static public var appRedColor1: UIColor {
+    static var appRedColor1: UIColor {
         return UIColor(hex: "e41937")
     }
     
     ///APP设计橘黄 FF853C
-    static public var appDesignOrangeColor: UIColor {
+    static var appDesignOrangeColor: UIColor {
         return UIColor.init(r: 255, g: 133, b: 60)
     }
     
     ///APP设计黄 FFD80E
-    static public var appDesignYellowColor: UIColor {
+    static var appDesignYellowColor: UIColor {
         return UIColor.init(r: 255, g: 216, b: 14)
     }
     
     ///APP设计绿 3CCC75
-    static public var appDesignGreenColor: UIColor {
+    static var appDesignGreenColor: UIColor {
         return UIColor.init(r: 60, g: 204, b: 117)
     }
     
