@@ -29,11 +29,11 @@ public class CustomCellTableVC: UIViewController, UITableViewDelegate, UITableVi
         tableView.tag = tableTag
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.bounces = false
-        tableView.isScrollEnabled = false
-        tableView.separatorStyle = .singleLine
-        tableView.separatorColor = UIColor(hex: "E8E8E8")
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        tableView.bounces = tableViewBounces
+        tableView.isScrollEnabled = tableViewScrollEnabled
+        tableView.separatorStyle = tableViewSeparatorStyle
+        tableView.separatorColor = tableViewSeparatorColor
+        tableView.separatorInset = tableViewSeparatorInset
         view.addSubview(tableView)
         tableView.snp_makeConstraints { (make) in
             if #available(iOS 11.0, *) {
@@ -136,4 +136,11 @@ public class CustomCellTableVC: UIViewController, UITableViewDelegate, UITableVi
     public let tableView: UITableView = UITableView()
     
     public weak var customCellDelegate: CustomCellTableVCDelegate?
+    
+    /// tableView config
+    public var tableViewBounces = false
+    public var tableViewScrollEnabled = false
+    public var tableViewSeparatorStyle = .singleLine
+    public var tableViewSeparatorColor = UIColor(hex: "E8E8E8")
+    public var tableViewSeparatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
 }
