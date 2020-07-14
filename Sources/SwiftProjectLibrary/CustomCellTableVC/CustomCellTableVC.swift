@@ -35,7 +35,7 @@ public class CustomCellTableVC: UIViewController, UITableViewDelegate, UITableVi
         tableView.separatorColor = tableViewSeparatorColor
         tableView.separatorInset = tableViewSeparatorInset
         view.addSubview(tableView)
-        tableView.snp_makeConstraints { (make) in
+        tableView.snp.makeConstraints { (make) in
             if #available(iOS 11.0, *) {
                 make.edges.equalTo(view.safeAreaInsets)
             } else {
@@ -140,7 +140,7 @@ public class CustomCellTableVC: UIViewController, UITableViewDelegate, UITableVi
     /// tableView config
     public var tableViewBounces = false
     public var tableViewScrollEnabled = false
-    public var tableViewSeparatorStyle = .singleLine
+    public var tableViewSeparatorStyle: UITableViewCell.SeparatorStyle = .singleLine
     public var tableViewSeparatorColor = UIColor(hex: "E8E8E8")
     public var tableViewSeparatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
 }
