@@ -8,7 +8,15 @@
 
 import UIKit
 
-public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate {
+public protocol CustomInfoCellProtocol: RegisterCellFromNib  {
+    var titleLabel: UILabel { get }
+    var contentLabel: UILabel { get }
+}
+extension CustomCellInfoTableVC where T : CustomInfoCellProtocol{
+    
+}
+
+public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&CustomInfoCellProtocol  {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +30,16 @@ public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate 
         tableViewVC.changeHeightCallback = changeHeightCallback
         
         view.addSubview(tableViewVC.view)
-        tableViewVC.view.snp_makeConstraints { (make) in
+        tableViewVC.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         tableViewVC.customCellDelegate = self
-        tableViewVC.registerCell(cellType: ShowDefaultCell.self)
+        tableViewVC.registerCell(cellType: CustomInfoCellT.self)
         
     }
     
     public func customCellTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, tagString: String) -> UITableViewCell {
-        let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as ShowDefaultCell
+        let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as T
         if indexPath.row < titleArray.count {
             cell.titleLabel.text = titleArray[indexPath.row]
             cell.contentLabel.text = contentArray[indexPath.row]
@@ -59,7 +67,7 @@ public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate 
         label.textColor = color
         label.font = UIFont.systemFont(ofSize: 16, weight: .light)
         view.addSubview(label)
-        label.snp_makeConstraints { (make) in
+        label.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
         }
@@ -78,6 +86,7 @@ public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate 
     public var contentArray: [String?] = []
     public var headerHeight: Float = 38
     public var sectionHeaderTitle = ""
+    public var CustomInfoCellT: T.Type = ShowDefaultCell.self as! T.Type
     
     public var changeHeightCallback:((_ height: Float)->Void)?
     public var viewForHeaderInSectionCallback:(()->UIView)?

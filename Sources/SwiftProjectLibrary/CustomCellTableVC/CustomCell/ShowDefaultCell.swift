@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib {
+public class ShowDefaultCell: UITableViewCell, CustomInfoCellProtocol {
     public static var height: CGFloat { 55 }
     
     public let titleLabel = UILabel()
@@ -28,15 +28,15 @@ public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib {
         contentLabel.numberOfLines = 2
         contentLabel.textAlignment = .right
         
-        titleLabel.snp_makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
-            make.right.equalTo(contentLabel.snp_left).offset(-10)
+            make.right.equalTo(contentLabel.snp.left).offset(-10)
         }
-        contentLabel.snp_makeConstraints { (make) in
+        contentLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().offset(-20)
-            make.left.equalTo(titleLabel.snp_right).offset(10)
+            make.left.equalTo(titleLabel.snp.right).offset(10)
         }
         titleLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
     }

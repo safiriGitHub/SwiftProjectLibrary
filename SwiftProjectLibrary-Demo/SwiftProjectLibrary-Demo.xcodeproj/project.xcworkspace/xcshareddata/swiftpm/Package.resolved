@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://gitee.com/mirrors/alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "2777659076fda38bd4e487739ee331c7a65b5924",
+          "version": "5.2.1"
+        }
+      },
+      {
+        "package": "Hue",
+        "repositoryURL": "https://gitee.com/safiri/Hue.git",
+        "state": {
+          "branch": null,
+          "revision": "b9d920cee4ba795fefb828d130744eee1e3d2feb",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://gitee.com/safiri/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftProjectLibrary",
+        "repositoryURL": "git@git.qiluys.cn:yunshun/swift-package-manager/swiftprojectlibrary.git",
+        "state": {
+          "branch": "master",
+          "revision": "fd720fc90491e914f5479f3de0bbb8478b7a2077",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
