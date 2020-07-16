@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class CustomContentCell: UITableViewCell {
+public class CustomContentCell: UITableViewCell, RegisterCellFromNib {
     
-//    public static var height: CGFloat = 40
+    public static var height: CGFloat = 40
     
     public override func awakeFromNib() {
         super.awakeFromNib()
