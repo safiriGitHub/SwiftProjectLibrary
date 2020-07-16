@@ -8,38 +8,37 @@
 
 import UIKit
 
-public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib, CustomInfoCellProtocol {
-    
+public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib {
     public static var height: CGFloat { 55 }
     
-    public var customInfoTitleLabel = UILabel()
-    public var customInfoContentLabel = UILabel()
+    public let titleLabel = UILabel()
+    public let contentLabel = UILabel()
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         
-        contentView.addSubview(customInfoTitleLabel)
-        customInfoTitleLabel.font = UIFont.systemFont(ofSize: 16)
-        customInfoTitleLabel.textColor = UIColor(hex: "333")
+        contentView.addSubview(titleLabel)
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.textColor = UIColor(hex: "333")
         
-        contentView.addSubview(customInfoContentLabel)
-        customInfoContentLabel.font = UIFont.systemFont(ofSize: 16)
-        customInfoContentLabel.textColor = UIColor(hex: "333")
-        customInfoContentLabel.numberOfLines = 2
-        customInfoContentLabel.textAlignment = .right
+        contentView.addSubview(contentLabel)
+        contentLabel.font = UIFont.systemFont(ofSize: 16)
+        contentLabel.textColor = UIColor(hex: "333")
+        contentLabel.numberOfLines = 2
+        contentLabel.textAlignment = .right
         
-        customInfoTitleLabel.snp.makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
-            make.right.equalTo(customInfoContentLabel.snp.left).offset(-10)
+            make.right.equalTo(contentLabel.snp.left).offset(-10)
         }
-        customInfoContentLabel.snp.makeConstraints { (make) in
+        contentLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().offset(-20)
-            make.left.equalTo(customInfoTitleLabel.snp.right).offset(10)
+            make.left.equalTo(titleLabel.snp.right).offset(10)
         }
-        customInfoTitleLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        titleLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
     }
     
     required init?(coder: NSCoder) {

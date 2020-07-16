@@ -8,28 +8,7 @@
 
 import UIKit
 
-public protocol CustomInfoCellProtocol {
-    var customInfoTitleLabel: UILabel { get }
-    var customInfoContentLabel: UILabel { get }
-}
-
-//extension UITableViewCell: CustomInfoCellProtocol {
-//    public var customInfoTitleLabel: UILabel {
-//        UILabel()
-//    }
-//    
-//    public var customInfoContentLabel: UILabel {
-//        UILabel()
-//    }
-//}
-//extension UITableViewCell: RegisterCellFromNib {
-//    public static var height: CGFloat {
-//        0
-//    }
-//
-//}
-
-public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&RegisterCellFromNib&CustomInfoCellProtocol  {
+public class CustomCellInfoTableVC: UIViewController, CustomCellTableVCDelegate {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +26,15 @@ public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelega
             make.edges.equalToSuperview()
         }
         tableViewVC.customCellDelegate = self
-        tableViewVC.registerCell(cellType: CustomInfoCellT.self)
+        tableViewVC.registerCell(cellType: ShowDefaultCell.self)
         
     }
     
     public func customCellTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, tagString: String) -> UITableViewCell {
-        let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as T
+        let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as ShowDefaultCell
         if indexPath.row < titleArray.count {
-            cell.customInfoTitleLabel.text = titleArray[indexPath.row]
-            cell.customInfoContentLabel.text = contentArray[indexPath.row]
+            cell.titleLabel.text = titleArray[indexPath.row]
+            cell.contentLabel.text = contentArray[indexPath.row]
         }
         return cell
     }
@@ -99,7 +78,6 @@ public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelega
     public var contentArray: [String?] = []
     public var headerHeight: Float = 38
     public var sectionHeaderTitle = ""
-    public var CustomInfoCellT: T.Type = ShowDefaultCell.self as! T.Type
     
     public var changeHeightCallback:((_ height: Float)->Void)?
     public var viewForHeaderInSectionCallback:(()->UIView)?
