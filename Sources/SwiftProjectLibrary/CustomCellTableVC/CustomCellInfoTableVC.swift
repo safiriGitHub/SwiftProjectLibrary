@@ -13,19 +13,23 @@ public protocol CustomInfoCellProtocol {
     var customInfoContentLabel: UILabel { get }
 }
 
-extension UITableViewCell: CustomInfoCellProtocol {
-    public var customInfoTitleLabel: UILabel {
-        UILabel()
-    }
-    
-    public var customInfoContentLabel: UILabel {
-        UILabel()
-    }
-    
-    
-}
+//extension UITableViewCell: CustomInfoCellProtocol {
+//    public var customInfoTitleLabel: UILabel {
+//        UILabel()
+//    }
+//    
+//    public var customInfoContentLabel: UILabel {
+//        UILabel()
+//    }
+//}
+//extension UITableViewCell: RegisterCellFromNib {
+//    public static var height: CGFloat {
+//        0
+//    }
+//
+//}
 
-public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&RegisterCellFromNib  {
+public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&RegisterCellFromNib&CustomInfoCellProtocol  {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
