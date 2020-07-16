@@ -8,15 +8,24 @@
 
 import UIKit
 
-public protocol CustomInfoCellProtocol: RegisterCellFromNib  {
-    var titleLabel: UILabel { get }
-    var contentLabel: UILabel { get }
+public protocol CustomInfoCellProtocol {
+    var customInfoTitleLabel: UILabel { get }
+    var customInfoContentLabel: UILabel { get }
 }
-extension CustomCellInfoTableVC where T : CustomInfoCellProtocol{
+
+extension UITableViewCell: CustomInfoCellProtocol {
+    public var customInfoTitleLabel: UILabel {
+        UILabel()
+    }
+    
+    public var customInfoContentLabel: UILabel {
+        UILabel()
+    }
+    
     
 }
 
-public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&CustomInfoCellProtocol  {
+public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelegate where T:UITableViewCell&RegisterCellFromNib  {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +50,8 @@ public class CustomCellInfoTableVC<T>: UIViewController, CustomCellTableVCDelega
     public func customCellTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, tagString: String) -> UITableViewCell {
         let cell = tableView.zs_dequeueReusableCell(indexPath: indexPath) as T
         if indexPath.row < titleArray.count {
-            cell.titleLabel.text = titleArray[indexPath.row]
-            cell.contentLabel.text = contentArray[indexPath.row]
+            cell.customInfoTitleLabel.text = titleArray[indexPath.row]
+            cell.customInfoContentLabel.text = contentArray[indexPath.row]
         }
         return cell
     }

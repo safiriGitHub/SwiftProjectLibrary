@@ -15,7 +15,7 @@ class Demo1VC: UIViewController, UITextFieldDelegate {
         view.backgroundColor = UIColor.red
         
         inputTFContentView.addSubview(sfzInputTFView)
-        sfzInputTFView.snp_makeConstraints { (make) in
+        sfzInputTFView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         

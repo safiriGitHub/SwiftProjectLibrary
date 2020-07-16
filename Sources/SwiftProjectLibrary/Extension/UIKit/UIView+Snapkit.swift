@@ -21,12 +21,12 @@ public extension UIView {
         let count = views.count
         for i in 0..<count {
             addSubview(views[i])
-            views[i].snp_makeConstraints { (make) in
+            views[i].snp.makeConstraints { (make) in
                 if i == 0 {
                     make.leading.equalToSuperview().offset(leadingTrailing)
                 }else {
-                    make.left.equalTo(self.subviews[i-1].snp_right).offset(space)
-                    make.width.equalTo(self.subviews[i-1].snp_width)
+                    make.left.equalTo(self.subviews[i-1].snp.right).offset(space)
+                    make.width.equalTo(self.subviews[i-1].snp.width)
                 }
                 if i == count-1 {
                     make.trailing.equalToSuperview().offset(-leadingTrailing)

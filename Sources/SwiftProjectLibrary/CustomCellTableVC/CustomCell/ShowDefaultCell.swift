@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ShowDefaultCell: UITableViewCell, CustomInfoCellProtocol {
+public class ShowDefaultCell: UITableViewCell, RegisterCellFromNib {
     public static var height: CGFloat { 55 }
     
     public let titleLabel = UILabel()
@@ -19,12 +19,12 @@ public class ShowDefaultCell: UITableViewCell, CustomInfoCellProtocol {
         selectionStyle = .none
         
         contentView.addSubview(titleLabel)
-        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        titleLabel.textColor = UIColor(hex: "5B6469")
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.textColor = UIColor(hex: "333")
         
         contentView.addSubview(contentLabel)
-        contentLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        contentLabel.textColor = UIColor(hex: "333945")
+        contentLabel.font = UIFont.systemFont(ofSize: 16)
+        contentLabel.textColor = UIColor(hex: "333")
         contentLabel.numberOfLines = 2
         contentLabel.textAlignment = .right
         

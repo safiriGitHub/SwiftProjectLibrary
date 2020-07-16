@@ -32,19 +32,19 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
     func setupSubviews(_ customTF: UITextField? = nil) {
         
         addSubview(hintingLabel)
-        self.hintingLabel.snp_makeConstraints { (make) in
+        self.hintingLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().offset(15)
         }
         
         addSubview(lineView)
-        self.lineView.snp_makeConstraints { (make) in
+        self.lineView.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()
             make.height.equalTo(1)
         }
         
         addSubview(inputContentview)
-        inputContentview.snp_makeConstraints { (make) in
+        inputContentview.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview().offset(-1)
             make.top.equalToSuperview().offset(35)
@@ -53,23 +53,23 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
         if let tf = customTF {
             tf.delegate = self
             inputContentview.addSubview(tf)
-            tf.snp_makeConstraints { (make) in
+            tf.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
             }
         }else {
             inputTF.delegate = self
             inputTF.isSecureTextEntry = inputType == .Password
             inputContentview.addSubview(inputTF)
-            inputTF.snp_makeConstraints { (make) in
+            inputTF.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
             }
         }
         
         
         addSubview(rightOperationBtn)
-        rightOperationBtn.snp_makeConstraints { (make) in
+        rightOperationBtn.snp.makeConstraints { (make) in
             make.trailing.equalToSuperview()
-            make.centerY.equalTo(inputContentview.snp_centerY)
+            make.centerY.equalTo(inputContentview.snp.centerY)
         }
         rightOperationBtn.addTarget(self, action: #selector(rightOperationBtnClick), for: .touchUpInside)
     }
@@ -82,13 +82,13 @@ public class InputTextFieldView: UIView, UITextFieldDelegate {
     //MARK: - action animation
     public func animationLineView(actitity: Bool) {
         if actitity {
-            self.lineView.snp_updateConstraints { (make) in
+            self.lineView.snp.updateConstraints { (make) in
                 make.height.equalTo(2)
             }
             self.lineView.backgroundColor = lineViewActiveColor
             self.hintingLabel.textColor = hintLabelActiveColor
         }else {
-            self.lineView.snp_updateConstraints { (make) in
+            self.lineView.snp.updateConstraints { (make) in
                 make.height.equalTo(1)
             }
             self.lineView.backgroundColor = lineViewNormalColor
