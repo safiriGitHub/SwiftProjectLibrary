@@ -35,7 +35,8 @@ public extension UIViewController {
         // 去掉文字显示
         vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(vc, animated: true)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        //navigationController?.setNavigationBarHidden(false, animated: true)
+        //由APP内的 NavigationController 控制
     }
     func popViewController() {
         navigationController?.popViewController(animated: true)
