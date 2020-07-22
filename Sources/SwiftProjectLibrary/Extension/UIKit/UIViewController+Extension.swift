@@ -30,14 +30,15 @@ public extension NibLoadable {
 public extension UIViewController {
     
     //MARK: - 页面跳转控制
-//    由APP内的 NavigationController 控制
-//    func pushViewController(_ vc: UIViewController) {
-//        vc.hidesBottomBarWhenPushed = true
-//        // 去掉文字显示
-//        vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        navigationController?.pushViewController(vc, animated: true)
-//        //navigationController?.setNavigationBarHidden(false, animated: true)
-//    }
+
+    func pushViewController(_ vc: UIViewController) {
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        //由APP内的 NavigationController 控制
+        // 去掉文字显示
+        //vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        //navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     func popViewController() {
         navigationController?.popViewController(animated: true)
     }
