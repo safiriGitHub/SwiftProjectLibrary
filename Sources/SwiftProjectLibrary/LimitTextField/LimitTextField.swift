@@ -144,7 +144,7 @@ extension LimitTextField: UITextFieldDelegate {
         
         if limitSystemPinyin {
             //限制系统拼音输入法
-            if ["➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "☻"].contains(string) {
+            if ["➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "☻", "，", "。", "？", "！"].contains(string) {
                 return true
             }
         }
