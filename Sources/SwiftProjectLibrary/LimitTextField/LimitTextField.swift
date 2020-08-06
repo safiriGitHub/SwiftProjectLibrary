@@ -135,7 +135,7 @@ public class LimitTextField: UITextField {
     
     private lazy var lastOprationStr: String = self.text!
     
-    var limitSystemPinyin = true
+    public var limitSystemPinyin = true
     
 }
 extension LimitTextField: UITextFieldDelegate {
