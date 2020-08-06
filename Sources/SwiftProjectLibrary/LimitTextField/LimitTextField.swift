@@ -135,18 +135,15 @@ public class LimitTextField: UITextField {
     
     private lazy var lastOprationStr: String = self.text!
     
-    public var limitSystemPinyin = true
-    
 }
 extension LimitTextField: UITextFieldDelegate {
 
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if limitSystemPinyin {
-            //限制系统拼音输入法
-            if ["➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "☻", "，", "。", "？", "！"].contains(string) {
-                return true
-            }
+        print(string)
+        //系统拼音输入法的bug
+        if ["➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "☻"].contains(string) {
+            return true
         }
         
         var input = string
