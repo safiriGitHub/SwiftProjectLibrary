@@ -84,7 +84,7 @@ public extension String {
     
     /// 转成银行卡显示格式（每隔4位加一个空格）
     func addBankcardFormat() -> String {
-        let bc = self.replacingOc currences(of: " ", with: "")
+        let bc = self.replacingOccurrences(of: " ", with: "")
         return bc.insert(" ", step: 4)
     }
     
