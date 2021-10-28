@@ -13,17 +13,10 @@ public class AlamofireReachability {
     
     public static let reachability = AlamofireReachability()
     
-    public var baiduReachabilityManager = NetworkReachabilityManager(host: "www.baidu.com")
-    
-    public func newworkReachability(_ manager: NetworkReachabilityManager?, reachabilityStatus: @escaping NetworkReachabilityManager.Listener) {
-        
-        manager?.listener = reachabilityStatus
-        manager?.startListening()
-        
-    }
-    
+    public let baiduReachabilityManager = NetworkReachabilityManager(host: "www.baidu.com")
+
     public func startListening(_ listening: @escaping NetworkReachabilityManager.Listener) {
-        newworkReachability(baiduReachabilityManager, reachabilityStatus: listening)
+        baiduReachabilityManager?.startListening(onUpdatePerforming: listening)
     }
 }
 

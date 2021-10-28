@@ -30,9 +30,14 @@ public extension NibLoadable {
 public extension UIViewController {
     
     //MARK: - 页面跳转控制
+
     func pushViewController(_ vc: UIViewController) {
         vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
+        //由APP内的 NavigationController 控制
+        // 去掉文字显示
+        //vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        //navigationController?.setNavigationBarHidden(false, animated: true)
     }
     func popViewController() {
         navigationController?.popViewController(animated: true)
@@ -91,9 +96,9 @@ public extension UIViewController {
     
     //MARK: - Navigation Config
     
-    func customSystemBackItem(withImage imgName: String) {
+    func customSystemBackItem(withImage imgName: String, tintColor: UIColor = .white) {
         let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.tintColor = tintColor
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: imgName)
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: imgName)
         navigationItem.backBarButtonItem = backItem
@@ -124,6 +129,11 @@ public extension UIViewController {
     }
     
     func setRightBarButtonItemWithString(_ string: String) {
+        setRightBarButtonItemWithString(string, buttonNormalTitleColor: .white, buttonHighlightedTitleColor: .lightGray)
+    }
+    func setRightBarButtonItemWithString(_ string: String,
+                                         buttonNormalTitleColor: UIColor,
+                                         buttonHighlightedTitleColor: UIColor) {
         var width = 45
         if string.count == 4 {
             width = 70
@@ -133,8 +143,8 @@ public extension UIViewController {
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: 44))
         button.setTitle(string, for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.setTitleColor(UIColor.lightGray, for: .highlighted)
+        button.setTitleColor(buttonNormalTitleColor, for: .normal)
+        button.setTitleColor(buttonHighlightedTitleColor, for: .highlighted)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         button.titleLabel?.textAlignment = .center
         button.addTarget(self, action: #selector(rightBarButtonItemClick), for: .touchUpInside)

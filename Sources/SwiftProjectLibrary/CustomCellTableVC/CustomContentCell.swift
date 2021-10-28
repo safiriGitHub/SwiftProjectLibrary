@@ -19,7 +19,7 @@ public class CustomContentCell: UITableViewCell, RegisterCellFromNib {
         contentLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         contentLabel.textColor = UIColor(hex: "333945")
         
-        contentLabel.snp_makeConstraints { (make) in
+        contentLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.top.bottom.equalToSuperview()

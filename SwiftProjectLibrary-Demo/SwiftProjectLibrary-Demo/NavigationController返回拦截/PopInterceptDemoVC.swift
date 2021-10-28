@@ -22,34 +22,34 @@ class PopInterceptDemoVC: UIViewController {
             print("few")
         }
     }
-    
-    override func shouldPopOnBackButton() -> Bool {
-        alert()
-        return false
-    }
-    
-    override func willMove(toParent parent: UIViewController?) {
-        if parent == nil && !poped {
-            alert()
-            return
-        }
-        super.willMove(toParent: parent)
-    }
-    
-    var poped = false
-    func alert() {
-        let alertController = UIAlertController(title: "返回",
-                                                message: "要返回吗?", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "sure", style: .default, handler: {
-            action in
-            self.poped = true
-            self.navigationController?.popViewController(animated: true);
-        })
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
+//    
+//    override func shouldPopOnBackButton() -> Bool {
+//        alert()
+//        return false
+//    }
+//    
+//    override func willMove(toParent parent: UIViewController?) {
+//        if parent == nil && !poped {
+//            alert()
+//            return
+//        }
+//        super.willMove(toParent: parent)
+//    }
+//    
+//    var poped = false
+//    func alert() {
+//        let alertController = UIAlertController(title: "返回",
+//                                                message: "要返回吗?", preferredStyle: .alert)
+//        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+//        let okAction = UIAlertAction(title: "sure", style: .default, handler: {
+//            action in
+//            self.poped = true
+//            self.navigationController?.popViewController(animated: true);
+//        })
+//        
+//        alertController.addAction(cancelAction)
+//        alertController.addAction(okAction)
+//        self.present(alertController, animated: true, completion: nil)
+//    }
     
 }
